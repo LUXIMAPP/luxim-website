@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+.main-font {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.germania-font {
+    font-family: 'Germania One', system-ui, sans-serif;
+}
