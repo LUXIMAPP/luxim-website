@@ -5,7 +5,6 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/globals.css';
 import '@fontsource/germania-one';
 import '@fontsource/plus-jakarta-sans';
-import Navbar from '../components/Navbar';
 
 const colors = {
   brand: {
@@ -31,7 +30,6 @@ const MyApp = ({ Component, pageProps }) => (
       <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     </Head>
     <ChakraProvider theme={theme}>
-      <Navbar />
       <main className="main-font">
         <Component {...pageProps} />
       </main>

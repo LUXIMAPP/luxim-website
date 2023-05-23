@@ -22,10 +22,10 @@ export const NumberComp = ({ number }) => (
 );
 
 const About = () => (
-  <Box mt={16} py={10}>
+  <Box mt={50} py={10} id="about">
     <Wrapper>
       <Box width="65%" textAlign="start">
-        <SectionTitle text="About Us" mb={2} />
+        <SectionTitle text="About Us" mb={2} mt={20} />
         <Text
           fontWeight="700"
           fontSize="40px"

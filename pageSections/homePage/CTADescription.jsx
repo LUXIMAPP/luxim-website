@@ -1,11 +1,11 @@
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import buyCard from '../../public/homePage/CTA/buyCard.jpg';
-import shopCard from '../../public/homePage/CTA/shopCard.jpg';
-import sellCard from '../../public/homePage/CTA/sellCard.jpg';
+import buyCard from '../../public/homePage/CTADetails/buyCard.jpg';
+import shopCard from '../../public/homePage/CTADetails/shopCard.jpg';
+import sellCard from '../../public/homePage/CTADetails/sellCard.jpg';
 import Wrapper from '../../components/Wrapper';
 
-const CTA = () => (
+const CTADescription = () => (
   <Wrapper mt={-20}>
     <Box display="flex" gap={5}>
       {[
@@ -46,4 +46,4 @@ const CTA = () => (
   </Wrapper>
 );
 
-export default CTA;
+export default CTADescription;

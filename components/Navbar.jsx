@@ -11,7 +11,14 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <Box bg="brand.primary1" color="white" py={3}>
+    <Box
+      bg="brand.primary1"
+      color="white"
+      py={3}
+      position="sticky"
+      top={0}
+      zIndex="100"
+    >
       <Wrapper>
         <UnorderedList
           display="flex"
@@ -25,58 +32,54 @@ const Navbar = () => {
               <Image src={logo} alt="luxim app logo" />
             </Box>
             <Box display="flex" gap={10}>
-              {['Home', 'About Us', 'Blog'].map((list) => (
-                <ListItem key={list}>
-                  <Link
-                    href={`/${
-                      list === 'Home' ? '' : list.toLowerCase().replace(' ', '-')
-                    }`}
-                  >
+              {[
+                { title: 'Home', link: '/' },
+                { title: 'About Us', link: '/#about' },
+                { title: 'Blog', link: '/#blog' },
+              ].map((list) => (
+                <ListItem key={list.title}>
+                  <Link href={`${list.link}`}>
                     <a
                       className={
-                      router.pathname
-                      === `/${
-                        list === 'Home'
-                          ? ''
-                          : list.toLowerCase().replace(' ', '-')
-                      }`
-                        ? 'text-[#D3DB22]'
-                        : ''
-                    }
+                        `${router.asPath === list.link
+                          ? 'text-[#D3DB22]'
+                          : ''} hover:text-[#D3DB22]`
+          }
                     >
-                      {list}
+                      {list.title}
                     </a>
                   </Link>
                 </ListItem>
               ))}
             </Box>
+
           </Box>
           <Box display="flex" gap={10} alignItems="center">
-            {['FAQs', 'Contact', 'Watch Demo'].map((list, index) => (index === 2 ? (
+            {[{ title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index === 1 ? (
               <AppButton
                 theme="brand.lemon"
                 display="flex"
                 alignItems="center"
                 fontWeight="400"
                 gap={3}
+                key={list}
               >
                 <Image src={play} alt="play icon" />
-                <ListItem key={list} color="black">
-                  {list}
-                </ListItem>
+                <Link href={`${list.link}`}>
+                  <a className="text-black">{list.title}</a>
+                </Link>
               </AppButton>
             ) : (
               <ListItem key={list}>
-                <Link href={`/${list.toLowerCase().replace(' ', '-')}`}>
+                <Link href={`${list.link}`}>
                   <a
                     className={
-                      router.pathname
-                      === `/${list.toLowerCase().replace(' ', '-')}`
-                        ? 'active'
-                        : ''
-                    }
+                        `${router.asPath === list.link
+                          ? 'text-[#D3DB22]'
+                          : ''} hover:text-[#D3DB22]`
+          }
                   >
-                    {list}
+                    {list.title}
                   </a>
                 </Link>
               </ListItem>
@@ -85,7 +88,6 @@ const Navbar = () => {
         </UnorderedList>
       </Wrapper>
     </Box>
-
   );
 };
 
