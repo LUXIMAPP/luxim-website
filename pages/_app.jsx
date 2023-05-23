@@ -13,6 +13,7 @@ const colors = {
     secondary: '#E24311',
     grey: '#879099',
     lemon: '#F6F8D3',
+    lightLemon: '#FCFCED',
   },
 };
 

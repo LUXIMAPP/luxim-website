@@ -55,7 +55,7 @@ const Navbar = () => {
 
           </Box>
           <Box display="flex" gap={10} alignItems="center">
-            {[{ title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index === 1 ? (
+            {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index === 2 ? (
               <AppButton
                 theme="brand.lemon"
                 display="flex"

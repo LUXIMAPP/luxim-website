@@ -1,5 +1,12 @@
+import AppShell from '../components/AppShell';
+import FAQ from '../pageSections/faqPage/FAQ';
+import FaqHero from '../pageSections/faqPage/Hero';
+
 const Faqs = () => (
-  <div>Faqs</div>
+  <AppShell>
+    <FaqHero />
+    <FAQ />
+  </AppShell>
 );
 
 export default Faqs;
