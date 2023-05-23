@@ -13,7 +13,7 @@ const CAT = () => {
     <Box pt={28} mt={35} bg="brand.lemon">
       <Wrapper>
         <Box width="55vw" margin="0 auto">
-          <Box mb={9}>
+          <Box mb={9} textAlign="center">
             <Text
               fontWeight="600"
               fontSize="36px"

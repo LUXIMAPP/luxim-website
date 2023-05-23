@@ -32,7 +32,7 @@ const CTADescription = () => (
               alt={`${card.label} card call to action section image`}
             />
           </Box>
-          <Box>
+          <Box textAlign="center">
             <Text fontWeight="700" fontSize="28px" mt={8} mb={2}>
               {card.label}
             </Text>

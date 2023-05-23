@@ -65,7 +65,7 @@ const Navbar = () => {
                 key={list}
               >
                 <Image src={play} alt="play icon" />
-                <Link href={`${list.link}`}>
+                <Link href={`${list.link}`} key={list.title}>
                   <a className="text-black">{list.title}</a>
                 </Link>
               </AppButton>
