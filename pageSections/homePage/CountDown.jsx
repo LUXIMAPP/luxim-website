@@ -1,8 +1,13 @@
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import tape from '../../public/homePage/countDown/tape.svg';
 import Wrapper from '../../components/Wrapper';
-import CountDownProper from '../../components/countdownComps/CountDownProper';
+
+const CountDownProper = dynamic(
+  () => import('../../components/countdownComps/CountDownProper'),
+  { ssr: false },
+);
 
 const CountDown = () => (
   <>

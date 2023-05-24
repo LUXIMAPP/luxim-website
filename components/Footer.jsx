@@ -71,7 +71,7 @@ const Footer = () => {
                 { logo: linkedin, link: '#', alt: 'LinkedIn icon logo' },
                 { logo: youtube, link: '#', alt: 'YouTube icon logo' },
               ].map((item) => (
-                <a href={item.link}>
+                <a key={item.a} href={item.link}>
                   <Image src={item.logo} alt={item.alt} />
                 </a>
               ))}

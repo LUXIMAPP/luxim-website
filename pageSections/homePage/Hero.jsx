@@ -22,11 +22,13 @@ const Hero = () => (
           </Text>
           <Box display="flex" gap={4}>
             <Input
+              zIndex="20"
               placeholder="Enter your email"
               fontSize="sm"
               style={{ padding: '0.5rem', height: '3rem' }}
             />
             <AppButton
+              zIndex="20"
               theme="brand.primary1"
               title="Join Waitlist"
               color="white"
