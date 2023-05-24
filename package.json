@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node ssr-server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "cross-env NODE_ENV=production node ssr-server.js",
     "lint": "next lint",
     "test": "jest --watchAll=false",
     "tests": "jest -o --collectCoverage",
@@ -20,10 +20,13 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/germania-one": "^5.0.0",
     "@fontsource/plus-jakarta-sans": "^5.0.0",
+    "@rumess/react-flip-countdown": "^1.2.6",
+    "express": "^4.18.2",
     "framer-motion": "^10.12.12",
     "husky": "^8.0.1",
     "next": "12.2.0",
     "react": "18.2.0",
+    "react-countdown": "^2.3.5",
     "react-dom": "18.2.0"
   },
   "devDependencies": {

@@ -8,9 +8,12 @@ import '@fontsource/plus-jakarta-sans';
 
 const colors = {
   brand: {
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
+    primary1: '#102816',
+    primary2: '#D3DB22',
+    secondary: '#E24311',
+    grey: '#879099',
+    lemon: '#F6F8D3',
+    lightLemon: '#FCFCED',
   },
 };
 

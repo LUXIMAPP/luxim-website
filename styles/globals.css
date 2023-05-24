@@ -11,3 +11,7 @@
 .germania-font {
     font-family: 'Germania One', system-ui, sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
