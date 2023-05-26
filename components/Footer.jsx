@@ -19,21 +19,22 @@ const Footer = () => {
       <Wrapper>
         <Box
           display="grid"
-          gridTemplateColumns="repeat(3, 0.5fr)"
+          gridTemplateColumns={{ base: 'repeat(2, .5fr)', md: 'repeat(3, 0.5fr)' }}
+          gap={{ base: 5, md: 0 }}
           textAlign="start"
           pb={8}
           borderBottom="1px solid white"
           color="white"
         >
-          <Box>
+          <Box gridColumn={{ base: '1 / 3', md: '1' }}>
             <Image src={footerLogo} alt="Luxim footer logo" />
-            <Text fontWeight="400" fontSize="14px" mt={8}>
+            <Text fontWeight="400" fontSize="14px" mt={8} display={{ base: 'none', md: 'block' }}>
               320, Agege Motorways, Papa-Ajao , Muhsin,
               <br />
               Lagos, Nigeria.
             </Text>
           </Box>
-          <Box>
+          <Box fontSize={{ base: '14px', md: '16px' }}>
             <Text fontWeight="600" mb={4}>
               Legal
             </Text>
@@ -47,7 +48,7 @@ const Footer = () => {
               )}
             </UnorderedList>
           </Box>
-          <Box>
+          <Box fontSize={{ base: '14px', md: '16px' }}>
             <Text fontWeight="600" mb={4}>
               Others
             </Text>
@@ -61,8 +62,8 @@ const Footer = () => {
           </Box>
         </Box>
         <Box pt={8}>
-          <Box display="flex" justifyContent="space-between" pb={4}>
-            <Text color="brand.lemon">{`©${currentYear} Luxim Inc. All rights reserved`}</Text>
+          <Box display="flex" flexDirection={{ base: 'column', md: 'row' }} gap={{ base: 6, md: 0 }} justifyContent="space-between" pb={4}>
+            <Text color="brand.lemon" fontSize={{ base: '14px', md: '16px' }}>{`©${currentYear} Luxim Inc. All rights reserved`}</Text>
             <Box display="flex" gap={4}>
               {[
                 { logo: facebook, link: '#', alt: 'Facebook icon logo' },

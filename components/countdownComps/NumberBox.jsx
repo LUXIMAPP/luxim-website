@@ -6,7 +6,7 @@ const NumberBox = ({ num, unit }) => (
       <div className="rounded-t-xl bg-[white] w-full h-full" />
 
       <div className="text-5xl absolute text-black z-10 font-bold md:text-7xl">
-        {num}
+        {num < 10 ? `0${num}` : num}
       </div>
 
       <div className=" rounded-b-xl bg-[white] w-full h-full" />

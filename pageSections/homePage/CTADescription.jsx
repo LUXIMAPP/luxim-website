@@ -6,8 +6,8 @@ import sellCard from '../../public/homePage/CTADetails/sellCard.jpg';
 import Wrapper from '../../components/Wrapper';
 
 const CTADescription = () => (
-  <Wrapper mt={-20}>
-    <Box display="flex" gap={5}>
+  <Wrapper mt={{ base: 10, md: -20 }}>
+    <Box display="flex" flexDirection={{ base: 'column', md: 'row' }} gap={12}>
       {[
         {
           label: 'Buy',
@@ -33,7 +33,7 @@ const CTADescription = () => (
             />
           </Box>
           <Box textAlign="center">
-            <Text fontWeight="700" fontSize="28px" mt={8} mb={2}>
+            <Text fontWeight="700" fontSize="28px" mt={{ base: 3, md: 8 }} mb={2}>
               {card.label}
             </Text>
             <Text color="brand.grey" fontWeight="500" lineHeight="24px">

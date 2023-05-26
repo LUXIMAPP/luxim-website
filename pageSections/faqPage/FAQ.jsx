@@ -13,12 +13,12 @@ import minusIcon from '../../public/faq/minus-circle.svg';
 import question from './question';
 
 const FAQ = () => (
-  <Box maxW="53vw" margin="0 auto" py={24}>
+  <Box maxW={{ base: '90vw', md: '53vw' }} margin="0 auto" py={24}>
     <Box textAlign="center">
-      <Text fontWeight="600" fontSize="36px" letterSpacing="-2%" mb={5}>
+      <Text fontWeight="600" fontSize={{ base: '24px', md: '36px' }} letterSpacing="-2%" mb={5}>
         Frequently asked questions
       </Text>
-      <Text fontWeight="400" fontSize="20px" color="brand.grey">
+      <Text fontWeight="400" fontSize={{ base: '18px', md: '20px' }} color="brand.grey">
         Everything you need to know about the product and billing.
       </Text>
     </Box>
@@ -33,7 +33,7 @@ const FAQ = () => (
                     _hover={{ bg: 'brand.lightLemon' }}
                     borderRadius="md"
                     display="grid"
-                    gridTemplateColumns="10% 90%"
+                    gridTemplateColumns={{ base: '20% 80%', md: '10% 90%' }}
                     py={4}
                   >
                     <Image
