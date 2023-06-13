@@ -10,7 +10,7 @@ const CountDownProper = dynamic(
 );
 
 const CountDown = () => (
-  <>
+  <Box display={{ base: 'none', lg: 'block' }}>
     <Box bg="brand.primary1" display="flex" alignItems="center" justifyContent="space-between" py={1} marginBottom={-20}>
       <Wrapper>
         <Box>
@@ -33,7 +33,7 @@ const CountDown = () => (
     <Box display="flex" justifyContent="right" position="relative" top="-213" zIndex={0}>
       <Image src={tape} alt="count down tape image" />
     </Box>
-  </>
+  </Box>
 );
 
 export default CountDown;

@@ -97,7 +97,7 @@ const question = [
   {
     question: `Can I return items purchased on Luxim?
         `,
-    answer: 'No, unfortunately you cannot return purchased items back to the seller. If your new item doesn\'t fit your wardrobe, we encourage you to style it and list it back on Luxim so it can find a new home! If you receive an item that arrives below our Standards, please email our team at <a href="mailto:hello@luximapp.com" style="font-weight: 800">hello@luximapp.com</a> and we will resolve the issue to your satisfaction, no questions asked.",',
+    answer: 'No, unfortunately you cannot return purchased items back to the seller. If your new item doesn\'t fit your wardrobe, we encourage you to style it and list it back on Luxim so it can find a new home! If you receive an item that arrives below our Standards, please email our team at <a href="mailto:hello@luximapp.com" style="font-weight: 800">hello@luximapp.com</a> and we will resolve the issue to your satisfaction, no questions asked.',
   },
   {
     question: 'How long does it take for Luxim to refund my purchase? ',

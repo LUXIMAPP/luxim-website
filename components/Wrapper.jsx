@@ -5,8 +5,8 @@ const Wrapper = ({
   children, showLeftPadding, showRightPadding, ...rest
 }) => (
   <Box
-    paddingLeft={showLeftPadding ?? 32}
-    paddingRight={showRightPadding ?? 32}
+    paddingLeft={showLeftPadding ?? { base: 6, md: 36 }}
+    paddingRight={showRightPadding ?? { base: 6, md: 32 }}
     {...rest}
   >
     {children}

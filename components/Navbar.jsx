@@ -6,6 +6,7 @@ import logo from '../public/navbar/logo.svg';
 import play from '../public/navbar/Play.svg';
 import AppButton from './AppButton';
 import Wrapper from './Wrapper';
+import HamburgerMenu from './HamburgerMenu';
 
 const Navbar = () => {
   const router = useRouter();
@@ -28,14 +29,14 @@ const Navbar = () => {
           margin="0"
         >
           <Box display="flex" gap={8}>
-            <Box>
-              <Image src={logo} alt="luxim app logo" />
+            <Box width="87.25px" height="auto">
+              <Image src={logo} alt="luxim app logo" layout="responsive" />
             </Box>
-            <Box display="flex" gap={10}>
+            <Box display={{ base: 'none', lg: 'flex' }} gap={10}>
               {[
                 { title: 'Home', link: '/' },
-                { title: 'About Us', link: '/#about' },
-                { title: 'Blog', link: '/#blog' },
+                { title: 'About Us', link: '/about' },
+                // { title: 'Blog', link: '/#blog' },
               ].map((list) => (
                 <ListItem key={list.title}>
                   <Link href={`${list.link}`}>
@@ -52,38 +53,41 @@ const Navbar = () => {
                 </ListItem>
               ))}
             </Box>
-
           </Box>
-          <Box display="flex" gap={10} alignItems="center">
-            {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index === 2 ? (
-              <AppButton
-                theme="brand.lemon"
-                display="flex"
-                alignItems="center"
-                fontWeight="400"
-                gap={3}
-                key={list}
-              >
-                <Image src={play} alt="play icon" />
-                <Link href={`${list.link}`} key={list.title}>
-                  <a className="text-black">{list.title}</a>
-                </Link>
-              </AppButton>
-            ) : (
-              <ListItem key={list}>
-                <Link href={`${list.link}`}>
-                  <a
-                    className={
+          <Box display="flex">
+            <Box display="flex" gap={10} alignItems="center">
+              {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index === 2 ? (
+                <AppButton
+                  theme="brand.lemon"
+                  display="flex"
+                  alignItems="center"
+                  fontWeight="400"
+                  gap={3}
+                  key={list}
+                  p={{ base: 2, lg: 6 }}
+                >
+                  <Image src={play} alt="play icon" />
+                  <Link href={`${list.link}`}>
+                    <a className="text-black min-[360px]:text-xs lg:text-lg" key={list.title}>{list.title}</a>
+                  </Link>
+                </AppButton>
+              ) : (
+                <ListItem key={list} display={{ base: 'none', lg: 'flex' }}>
+                  <Link href={`${list.link}`}>
+                    <a
+                      className={
                         `${router.asPath === list.link
                           ? 'text-[#D3DB22]'
                           : ''} hover:text-[#D3DB22]`
           }
-                  >
-                    {list.title}
-                  </a>
-                </Link>
-              </ListItem>
-            )))}
+                    >
+                      {list.title}
+                    </a>
+                  </Link>
+                </ListItem>
+              )))}
+            </Box>
+            <Box display={{ base: 'block', lg: 'none' }} width="35px"><HamburgerMenu /></Box>
           </Box>
         </UnorderedList>
       </Wrapper>
