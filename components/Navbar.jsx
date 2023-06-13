@@ -32,11 +32,11 @@ const Navbar = () => {
             <Box width="87.25px" height="auto">
               <Image src={logo} alt="luxim app logo" layout="responsive" />
             </Box>
-            <Box display={{ base: 'none', md: 'flex' }} gap={10}>
+            <Box display={{ base: 'none', lg: 'flex' }} gap={10}>
               {[
                 { title: 'Home', link: '/' },
-                { title: 'About Us', link: '/#about' },
-                { title: 'Blog', link: '/#blog' },
+                { title: 'About Us', link: '/about' },
+                // { title: 'Blog', link: '/#blog' },
               ].map((list) => (
                 <ListItem key={list.title}>
                   <Link href={`${list.link}`}>
@@ -64,14 +64,15 @@ const Navbar = () => {
                   fontWeight="400"
                   gap={3}
                   key={list}
+                  p={{ base: 2, lg: 6 }}
                 >
                   <Image src={play} alt="play icon" />
                   <Link href={`${list.link}`}>
-                    <a className="text-black min-[360px]:text-xs md:text-lg" key={list.title}>{list.title}</a>
+                    <a className="text-black min-[360px]:text-xs lg:text-lg" key={list.title}>{list.title}</a>
                   </Link>
                 </AppButton>
               ) : (
-                <ListItem key={list} display={{ base: 'none', md: 'flex' }}>
+                <ListItem key={list} display={{ base: 'none', lg: 'flex' }}>
                   <Link href={`${list.link}`}>
                     <a
                       className={
@@ -86,7 +87,7 @@ const Navbar = () => {
                 </ListItem>
               )))}
             </Box>
-            <Box display={{ base: 'block', md: 'none' }}><HamburgerMenu /></Box>
+            <Box display={{ base: 'block', lg: 'none' }} width="35px"><HamburgerMenu /></Box>
           </Box>
         </UnorderedList>
       </Wrapper>

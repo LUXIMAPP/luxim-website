@@ -10,7 +10,7 @@ const CountDownProper = dynamic(
 );
 
 const CountDown = () => (
-  <Box display={{ base: 'none', md: 'block' }}>
+  <Box display={{ base: 'none', lg: 'block' }}>
     <Box bg="brand.primary1" display="flex" alignItems="center" justifyContent="space-between" py={1} marginBottom={-20}>
       <Wrapper>
         <Box>

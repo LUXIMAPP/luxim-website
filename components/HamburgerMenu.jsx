@@ -15,14 +15,14 @@ const HamburgerMenu = () => {
     <Box as="nav" role="navigation">
       <Box id="menuToggle" onClick={() => setIsOpen(!isOpen)}>
         <Box style={{ position: 'relative', zIndex: 2 }}>
-          <Hamburger toggled={isOpen} toggle={setIsOpen} />
+          <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} />
         </Box>
         <Slide direction="right" in={isOpen}>
           <UnorderedList id="menu" pt={2} m={0}>
             {[
               { title: 'Home', link: '/' },
-              { title: 'About Us', link: '/#about' },
-              { title: 'Blog', link: '/#blog' },
+              { title: 'About Us', link: '/about' },
+              // { title: 'Blog', link: '/#blog' },
               { title: 'FAQs', link: '/faqs' },
               { title: 'Contact', link: '/#contact' },
             ].map((list) => (
