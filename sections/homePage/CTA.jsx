@@ -23,11 +23,12 @@ const CTA = () => {
               letterSpacing="-2%"
               lineHeight="44px"
               mb={{ base: 6, lg: 6 }}
+              as="h2"
             >
               Turn your closet into cash
             </Text>
             <Text fontWeight="400" fontSize={{ base: '16px', lg: '18px' }} textAlign={{ base: 'center', lg: 'left' }} lineHeight="28px">
-              List an item in less than 60 seconds. Download the app now
+              List an item in less than 60 seconds. Download the app now.
             </Text>
           </Box>
           <Box display={{ base: 'block', md: 'flex' }} gap={4} justifyContent="center" width={{ base: '100%', lg: '70%' }}>

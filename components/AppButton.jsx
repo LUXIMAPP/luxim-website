@@ -1,7 +1,7 @@
 import { Button, Text } from '@chakra-ui/react';
 
 const AppButton = ({
-  children, title, color, theme, isLoading, ...rest
+  children, title, color, theme, isLoading, isHover, ...rest
 }) => (
   <Button
     bg={theme}
@@ -13,7 +13,7 @@ const AppButton = ({
     _hover={{
       bg: theme === 'white' ? 'white' : 'transparent',
       color: theme === 'white' ? 'black' : theme,
-      border: '1px solid #102816',
+      border: `1px solid ${isHover ? 'white' : '#102816'}`,
     }}
     isLoading={isLoading}
     {...rest}

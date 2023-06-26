@@ -16,7 +16,7 @@ const AboutStat = () => (
     </Box>
     <Box width={{ base: '100%', lg: '50%' }}>
       <Text color="brand.grey" lineHeight="24px" fontSize={{ base: '14px', lg: '16px' }}>We’ve helped hundreds of individual sell used clothing items</Text>
-      <Text fontWeight="600" fontSize={{ base: '30px', lg: '48px' }} lineHeight={{ base: '38px', lg: '60px' }} mt={3}>We’re only just getting started on our journey</Text>
+      <Text fontWeight="600" fontSize={{ base: '30px', lg: '48px' }} lineHeight={{ base: '38px', lg: '60px' }} mt={3} as="h2">We’re only just getting started on our journey</Text>
       <Box mt={{ base: 12, lg: 16 }} display="grid" gridTemplateColumns={{ base: '100%', lg: 'repeat(2, 0.5fr)' }} rowGap={{ base: 8, lg: 12 }}>
         {[
           { number: '400', title: 'Closet owners', symbol: '+' },

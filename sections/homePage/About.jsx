@@ -23,14 +23,15 @@ export const NumberComp = ({ number }) => (
 const About = () => (
   <Box mt={{ sm: 0, lg: 50 }} pt={10} pb={{ sm: 0, lg: 32 }}>
     <Wrapper>
-      <Box width={{ sm: 'full', lg: '65%' }} textAlign="start">
-        {/* <SectionTitle text="About Us" mb={2} mt={20} /> */}
+      <Box width={{ sm: 'full', lg: '50%' }} textAlign="start">
         <Text
           fontWeight="700"
           fontSize={{ base: '24px', lg: '40px' }}
           lineHeight={{ base: '36px', lg: '60px' }}
           letterSpacing="-2.2%"
+          display={{ base: 'none', md: 'block' }}
           mb={2}
+          as="h2"
         >
           Explore
           <Text as="span" mx={2} color="brand.secondary">
@@ -39,10 +40,36 @@ const About = () => (
           Society
         </Text>
         <Text
+          fontWeight="700"
+          fontSize={{ base: '24px', lg: '40px' }}
+          lineHeight={{ base: '36px', lg: '60px' }}
+          letterSpacing="-2.2%"
+          display={{ base: 'block', md: 'none' }}
+          mb={2}
+        >
+          <Text as="span" mr={2} color="brand.secondary">
+            Luxim
+          </Text>
+          -  social and secure experience to shop for traditional fashion
+        </Text>
+        <Text
           fontWeight="400"
-          fontSize={{ base: '17px', lg: '20px' }}
+          fontSize={{ base: '17px', lg: '18px' }}
           color="brand.grey"
           lineHeight={{ base: '24px', lg: '32px' }}
+          display={{ base: 'none', md: 'block' }}
+        >
+          Luxim is more than just a marketplace, luxim is a community creating
+          opportunities to earn income, inspire others through thier unique
+          style and reduce clothing waste along the way
+        </Text>
+        <Text
+          fontWeight="400"
+          fontSize={{ base: '17px', lg: '18px' }}
+          color="brand.grey"
+          lineHeight={{ base: '24px', lg: '32px' }}
+          display={{ base: 'block', md: 'none' }}
+
         >
           Community of traditional fashion enthusiasts can connect, inspire, and
           create opportunities to earn income while reducing clothing waste.
@@ -52,7 +79,6 @@ const About = () => (
         display={{ sm: 'block', lg: 'flex' }}
         flexDirection="row-reverse"
         justifyContent="space-between"
-        alignItems="center"
         mt={10}
       >
         <Box width={{ sm: 'full', lg: '50%' }}>
@@ -61,7 +87,6 @@ const About = () => (
               key={item.number || item.text}
               display="grid"
               gridTemplateColumns="10% 85%"
-              alignItems="center"
               gap={4}
             >
               {item.number && (
@@ -74,6 +99,7 @@ const About = () => (
                     fontSize={{ base: '18px', lg: '20px' }}
                     color="brand.secondary"
                     textAlign="start"
+                    as="h3"
                   >
                     {item.title}
                   </Text>
@@ -82,13 +108,17 @@ const About = () => (
               {item.image && (
                 <>
                   <Image src={item.image} alt="line" />
-                  <Text textAlign="start">{item.text}</Text>
+                  <Text textAlign="start" mb={8} mt={2}>
+                    {item.text}
+                  </Text>
                 </>
               )}
               {item.image === '' && (
                 <>
                   <Box />
-                  <Text textAlign="start">{item.text}</Text>
+                  <Text textAlign="start" mb={8} mt={2}>
+                    {item.text}
+                  </Text>
                 </>
               )}
             </Box>

@@ -1,14 +1,18 @@
 import AppShell from '../components/AppShell';
-import FAQ from '../pageSections/faqPage/FAQ';
-import FaqHero from '../pageSections/faqPage/Hero';
+import FAQ from '../sections/faqPage/FAQ';
+import FaqHero from '../sections/faqPage/Hero';
 import { CustomerGrowth } from './about';
+import OgHead from '../components/OgHead';
 
 const Faqs = () => (
-  <AppShell>
-    <FaqHero />
-    <FAQ />
-    <CustomerGrowth />
-  </AppShell>
+  <>
+    <OgHead description="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities." title="Luxim FAQs" />
+    <AppShell>
+      <FaqHero />
+      <FAQ />
+      <CustomerGrowth />
+    </AppShell>
+  </>
 );
 
 export default Faqs;
