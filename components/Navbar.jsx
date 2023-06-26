@@ -2,14 +2,16 @@ import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import logo from '../public/navbar/logo.svg';
-import play from '../public/navbar/Play.svg';
 import AppButton from './AppButton';
 import Wrapper from './Wrapper';
 import HamburgerMenu from './HamburgerMenu';
+import Play from '../public/navbar/Play';
 
 const Navbar = () => {
   const router = useRouter();
+  const [isHover, setIsHover] = useState(false);
 
   return (
     <Box
@@ -65,10 +67,13 @@ const Navbar = () => {
                   gap={3}
                   key={list}
                   p={{ base: 2, lg: 6 }}
+                  onMouseEnter={() => setIsHover(true)}
+                  onMouseLeave={() => setIsHover(false)}
+                  isHover={isHover}
                 >
-                  <Image src={play} alt="play icon" />
+                  <Play color={isHover ? 'white' : '#102816'} />
                   <Link href={`${list.link}`}>
-                    <a className="text-black min-[360px]:text-xs lg:text-lg" key={list.title}>{list.title}</a>
+                    <a className={`text-${isHover ? 'white' : 'black'} min-[360px]:text-xs lg:text-lg`} key={list.title}>{list.title}</a>
                   </Link>
                 </AppButton>
               ) : (

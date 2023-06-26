@@ -25,16 +25,18 @@ const Hero = () => {
         display="flex"
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems="center"
-        mt={16}
-        mb={12}
+        gap={{ base: 0, lg: 32 }}
+        mt={{ base: 10, lg: 16 }}
+        mb={{ base: 8, md: 12 }}
+        pb={{ base: 10, lg: 32 }}
       >
         <Box width={{ base: '100%', lg: '50%' }}>
-          <Box width={{ base: 'full', lg: '70%' }} textAlign="start">
-            {/* <SectionTitle text="Welcome to" mb={{ base: 4, lg: 8 }} /> */}
+          <Box width={{ base: 'full', lg: '100%' }} textAlign="start">
             <Text
-              fontSize={{ base: '30px', lg: '36px' }}
+              as="h1"
+              fontSize={{ base: '30px', lg: '60px' }}
               fontWeight="700"
-              lineHeight="48px"
+              lineHeight={{ base: '40px', lg: '80px' }}
               mb={{ base: 4, lg: 6 }}
             >
               Buy . Sell . Discover
@@ -46,10 +48,11 @@ const Hero = () => {
               <Box as="span" color="brand.secondary">Style</Box>
             </Text>
             <Text
-              fontWeight="500"
+              fontWeight={{ base: '500', lg: '400' }}
               color="brand.grey"
               lineHeight="28px"
-              mb={{ base: 8, lg: 16 }}
+              fontSize={{ base: '15px', lg: '18px' }}
+              mb={8}
             >
               Sell designer, vintage, preloved, latest trends, event attire and
               more. Whatever your style, sell and shop on Luxim– the social
@@ -64,8 +67,8 @@ const Hero = () => {
                 <Input
                   zIndex="20"
                   placeholder="Enter your email"
-                  fontSize="sm"
-                  style={{ padding: '0.5rem', height: '3rem' }}
+                  fontSize="12px"
+                  style={{ padding: '0.5rem', height: '3.15rem' }}
                   onChange={(e) => setUserEmail(e.target.value)}
                   value={userEmail}
                 />
@@ -122,6 +125,7 @@ const Hero = () => {
           <Image src={heroImgMobile} alt="hero section image" />
         </Box>
       </Box>
+      <Box />
     </Wrapper>
   );
 };

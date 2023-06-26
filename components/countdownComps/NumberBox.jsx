@@ -1,21 +1,12 @@
+import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
 
-const NumberBox = ({ num, unit }) => (
-  <div className="flex flex-col items-center px-2">
-    <div className=" relative bg-transparent flex flex-col items-center justify-center rounded-lg w-24 h-24 text-2xl md:text-4xl">
-      <div className="rounded-t-xl bg-[white] w-full h-full" />
+const NumberBox = ({ num, ...rest }) => (
+  <Box fontWeight="700" fontSize="32px" lineHeight="40.32px" {...rest}>
+    <Text m={3}>
+      {num < 10 ? `0${num}` : num}
+    </Text>
+  </Box>
 
-      <div className="text-5xl absolute text-black z-10 font-bold md:text-7xl">
-        {num < 10 ? `0${num}` : num}
-      </div>
-
-      <div className=" rounded-b-xl bg-[white] w-full h-full" />
-
-    </div>
-    <p className="text-lg mt-2 font-semibold text-[#D3DB22] md:text-lg ">
-      {unit}
-    </p>
-  </div>
 );
-
 export default NumberBox;

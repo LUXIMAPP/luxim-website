@@ -26,50 +26,53 @@ const CTADescription = () => (
   <Box
     bgSize="cover"
     bgPosition="center"
-    py={20}
+    py={{ base: 16, md: 20 }}
   >
     <Wrapper display="flex">
       <Box
         bg="#E5F5E9"
         bgImage={`url(${CTAbackground.src})`}
-        py={{ base: 10, lg: 14 }}
-        px={{ base: 6, lg: 10 }}
+        py={{ base: 10, lg: 20 }}
+        px={{ base: 10, lg: 20 }}
         borderRadius="30px"
         display="flex"
+        alignItems="center"
         flexDirection={{ base: 'column', lg: 'row' }}
-        gap={{ base: 5, lg: 0 }}
+        gap={{ base: 5, lg: 24 }}
         justifyContent="space-between"
         width="100%"
       >
-        <Box width={{ base: '100%', lg: '30vw' }}>
+        <Box width={{ base: '100%', lg: '50vw' }}>
           <Image src={MobilePhoto} />
         </Box>
-        <Box bg="#E5F5E9" width={{ base: '100%', lg: '40vw' }} p={{ base: 2, lg: 10 }}>
-          <Text fontWeight="700" fontSize={{ base: '32px', lg: '40px' }}>Sell Your Way</Text>
+        <Box width={{ base: '100%', lg: '50vw' }}>
+          <Text fontWeight="700" fontSize={{ base: '32px', lg: '40px' }} mb={8} as="h2">Sell Your Way</Text>
           {sellYourWaySection.map((item) => (
             <Box
-              display="grid"
-              gridTemplateColumns="12% 88%"
+              display="flex"
               fontWeight="500"
               alignItems="start"
               mt={4}
+              gap={4}
               key={item.title}
             >
-              <Box
-                w={{ base: 6, lg: 10 }}
-                h={{ base: 6, lg: 10 }}
-                color="white"
-                bg="brand.secondary"
-                borderRadius="full"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Text fontSize={{ base: '14px', lg: '24px' }} lineHeight="32px">{item.number}</Text>
+              <Box width="fit-content" height="32px" display="flex" alignItems="center">
+                <Box
+                  w={6}
+                  h={6}
+                  color="white"
+                  bg="brand.primary1"
+                  borderRadius="full"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Text fontSize="14px" lineHeight="32px">{item.number}</Text>
+                </Box>
               </Box>
               <Box>
-                <Text fontSize={{ base: '20px', lg: '24px' }} lineHeight="normal" mb={{ base: 1, lg: 0 }}>{item.title}</Text>
-                <Text color="brand.grey" lineHeight="24px">{item.text}</Text>
+                <Text fontSize={{ base: '18px', lg: '20px' }} mb={2} as="h3">{item.title}</Text>
+                <Text color="brand.grey" lineHeight="24px" mb={11}>{item.text}</Text>
               </Box>
             </Box>
           ))}
