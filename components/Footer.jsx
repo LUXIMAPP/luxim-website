@@ -92,13 +92,13 @@ const Footer = () => {
             </Text>
             <Box display="flex" gap={4}>
               {[
-                { logo: facebook, link: '#', alt: 'Facebook icon logo' },
-                { logo: twitter, link: '#', alt: 'Twitter icon logo' },
-                { logo: instagram, link: '#', alt: 'Instagram icon logo' },
-                { logo: linkedin, link: '#', alt: 'LinkedIn icon logo' },
+                { logo: facebook, link: 'https://www.facebook.com/luximapp', alt: 'Facebook icon logo' },
+                { logo: twitter, link: 'https://twitter.com/LuximApp', alt: 'Twitter icon logo' },
+                { logo: instagram, link: 'https://www.instagram.com/luximapp/', alt: 'Instagram icon logo' },
+                { logo: linkedin, link: 'https://www.linkedin.com/company/luxim/', alt: 'LinkedIn icon logo' },
                 { logo: youtube, link: '#', alt: 'YouTube icon logo' },
               ].map((item) => (
-                <a key={item.alt} href={item.link}>
+                <a key={item.alt} href={item.link} target="_blank" rel="noreferrer">
                   <Image src={item.logo} alt={item.alt} />
                 </a>
               ))}

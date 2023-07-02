@@ -107,7 +107,9 @@ const About = () => (
               )}
               {item.image && (
                 <>
-                  <Image src={item.image} alt="line" />
+                  <Box display="flex" justifyContent="center">
+                    <Box as="span" borderLeft="1px dashed black" />
+                  </Box>
                   <Text textAlign="start" mb={8} mt={2}>
                     {item.text}
                   </Text>
