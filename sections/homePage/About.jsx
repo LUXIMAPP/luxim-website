@@ -80,6 +80,7 @@ const About = () => (
         flexDirection="row-reverse"
         justifyContent="space-between"
         mt={10}
+        mb={{ base: 10, lg: 0 }}
       >
         <Box width={{ sm: 'full', lg: '50%' }}>
           {features.map((item) => (
@@ -107,7 +108,9 @@ const About = () => (
               )}
               {item.image && (
                 <>
-                  <Image src={item.image} alt="line" />
+                  <Box display="flex" justifyContent="center">
+                    <Box as="span" borderLeft="1px dashed black" />
+                  </Box>
                   <Text textAlign="start" mb={8} mt={2}>
                     {item.text}
                   </Text>

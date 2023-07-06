@@ -2,6 +2,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import QRCode from 'react-qr-code';
 import FooterClosure from '../../components/FooterClosure';
+import AppButton from '../../components/AppButton';
 
 const ScanCode = () => (
   <FooterClosure
@@ -11,11 +12,35 @@ const ScanCode = () => (
     paddingTop={{ base: 20, lg: 8 }}
     mt={{ base: 10, lg: 0 }}
   >
-    <Box textAlign="center">
-      <Text fontWeight="600" fontSize={{ base: '24px', lg: '30px' }} mb={4} as="h4">
-        Scan the QR Code to download
-      </Text>
-      <Text>Join over 4,000+ customers already growing with Luxim.</Text>
+    <Box textAlign="center" display="flex" alignItems="center" flexDirection="column" gap={5}>
+      <Box>
+        <Text fontWeight="600" fontSize={{ base: '24px', lg: '30px' }} mb={4} as="h4">
+          Scan the QR Code to download
+        </Text>
+        <Text>Join over 4,000+ customers already growing with Luxim.</Text>
+      </Box>
+      <Box
+        display="flex"
+        gap={3}
+        justifyContent="center"
+        flexDirection={{ base: 'column', md: 'row' }}
+        width="100%"
+      >
+        <a href="mailto:hello@luximapp.com">
+          <AppButton
+            color="black"
+            theme="white"
+            width="100%"
+            boxShadow="0px 1px 2px rgba(16, 24, 40, 0.05)"
+            title="Email us"
+          />
+        </a>
+        <AppButton
+          title="Chat to our team"
+          color="white"
+          theme="brand.primary1"
+        />
+      </Box>
     </Box>
     <Box mt={{ base: 6, lg: 0 }}>
       <Box

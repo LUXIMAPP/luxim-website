@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 
-const calculateTimeLeft = () => {
-  const difference = +new Date('2023-7-1') - +new Date();
+export const calculateTimeLeft = () => {
+  const targetDate = new Date('2023-08-01');
+  const currentDate = new Date();
+  const difference = targetDate.getTime() - currentDate.getTime();
   let timeLeft = {};
 
   if (difference > 0) {
     timeLeft = {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
+      minutes: Math.floor((difference / (1000 * 60)) % 60),
       seconds: Math.floor((difference / 1000) % 60),
     };
   }
@@ -23,10 +25,14 @@ const useCountdown = () => {
   } = timeLeft;
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-  });
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [timeLeft]);
 
   return {
     days, hours, minutes, seconds,

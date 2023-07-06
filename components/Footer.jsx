@@ -3,19 +3,22 @@ import {
   Box, ListItem, Text, UnorderedList,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import footerLogo from '../public/footer/footer-logo.svg';
 import facebook from '../public/footer/Facebook logo.svg';
 import twitter from '../public/footer/Twitter logo.svg';
 import instagram from '../public/footer/Instagram logo.svg';
 import linkedin from '../public/footer/LinkedIn logo.svg';
-import youtube from '../public/footer/YouTube logo.svg';
+// import youtube from '../public/footer/YouTube logo.svg';
 import Wrapper from './Wrapper';
 
 const Footer = () => {
   const date = new Date();
   const currentYear = date.getFullYear();
+  const router = useRouter();
   return (
-    <Box bg="brand.primary1" pb={16} pt={{ base: 16, lg: 40 }} id="contact">
+    <Box bg="brand.primary1" pb={{ base: 10, lg: 16 }} pt={{ base: 16, lg: 40 }} id="contact">
       <Wrapper>
         <Box
           display="grid"
@@ -37,7 +40,7 @@ const Footer = () => {
               mt={8}
               display={{ base: 'none', lg: 'block' }}
             >
-              320, Agege Motorways, Papa-Ajao , Muhsin,
+              32-34 Opebi Road, Ikeja,
               <br />
               Lagos, Nigeria.
             </Text>
@@ -48,12 +51,22 @@ const Footer = () => {
             </Text>
             <UnorderedList listStyleType="none" m={0} spacing={4}>
               {[
-                'Terms and Conditions',
-                'Privacy Policy',
-                'Return Policies',
+                { title: 'Terms and Conditions', link: '/terms-and-conditions' },
+                { title: 'Privacy Policy', link: '/privacy-policy' },
+                // { title: 'Return Policies', link: '#' },
               ].map((item) => (
-                <ListItem _hover={{ color: 'brand.primary2' }} key={item}>
-                  <a href="#">{item}</a>
+                <ListItem key={item.title}>
+                  <Link href={`${item.link}`}>
+                    <a
+                      className={
+                        `${router.asPath === item.link
+                          ? 'text-[#D3DB22]'
+                          : ''} hover:text-[#D3DB22]`
+          }
+                    >
+                      {item.title}
+                    </a>
+                  </Link>
                 </ListItem>
               ))}
             </UnorderedList>
@@ -66,7 +79,7 @@ const Footer = () => {
               {[
                 { link: '/about', title: 'About Us' },
                 { link: '/faqs', title: 'FAQs' },
-                { link: '/contact', title: 'Contact' },
+                { link: '/#contact', title: 'Contact' },
               ].map((item) => (
                 <ListItem _hover={{ color: 'brand.primary2' }} key={item.link}>
                   <a href={item.link}>{item.title}</a>
@@ -92,13 +105,13 @@ const Footer = () => {
             </Text>
             <Box display="flex" gap={4}>
               {[
-                { logo: facebook, link: '#', alt: 'Facebook icon logo' },
-                { logo: twitter, link: '#', alt: 'Twitter icon logo' },
-                { logo: instagram, link: '#', alt: 'Instagram icon logo' },
-                { logo: linkedin, link: '#', alt: 'LinkedIn icon logo' },
-                { logo: youtube, link: '#', alt: 'YouTube icon logo' },
+                { logo: facebook, link: 'https://www.facebook.com/luximapp', alt: 'Facebook icon logo' },
+                { logo: twitter, link: 'https://twitter.com/LuximApp', alt: 'Twitter icon logo' },
+                { logo: instagram, link: 'https://www.instagram.com/luximapp/', alt: 'Instagram icon logo' },
+                { logo: linkedin, link: 'https://www.linkedin.com/company/luxim/', alt: 'LinkedIn icon logo' },
+                // { logo: youtube, link: '#', alt: 'YouTube icon logo' },
               ].map((item) => (
-                <a key={item.alt} href={item.link}>
+                <a key={item.alt} href={item.link} target="_blank" rel="noreferrer">
                   <Image src={item.logo} alt={item.alt} />
                 </a>
               ))}

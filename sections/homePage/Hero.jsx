@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import {
-  Box, Input, Text,
+  Box, Input, Text, useToast,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -17,6 +17,17 @@ const Hero = () => {
   const [isAppleLogoHovered, setAppleLogoHover] = useState(false);
   const [isAndriodLogoHovered, setAndriodLogoHover] = useState(false);
   const { onClick: joinWaitlist, loader } = useJoinWaitList(setUserEmail);
+  const toast = useToast();
+  const toastBody = () => {
+    toast({
+      title: 'Note!',
+      description: 'This will be available on the launch date.',
+      status: 'info',
+      position: 'top-right',
+      variant: 'left-accent',
+      isClosable: true,
+    });
+  };
   // bukola Egberongbe
 
   return (
@@ -94,6 +105,7 @@ const Hero = () => {
                 onMouseEnter={() => setAppleLogoHover(true)}
                 onMouseLeave={() => setAppleLogoHover(false)}
                 mb={{ base: 3, lg: 0 }}
+                onClick={toastBody}
               >
                 <Box>
                   <AppleLogo color={isAppleLogoHovered ? 'white' : 'black'} />
@@ -109,6 +121,7 @@ const Hero = () => {
                 onMouseEnter={() => setAndriodLogoHover(true)}
                 onMouseLeave={() => setAndriodLogoHover(false)}
                 _hover={{ color: 'white', bg: 'black' }}
+                onClick={toastBody}
               >
                 <Box>
                   <AndriodLogo color={isAndriodLogoHovered ? 'white' : 'black'} />

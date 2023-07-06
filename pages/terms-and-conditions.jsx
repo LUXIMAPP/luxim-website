@@ -1,17 +1,15 @@
 import Head from 'next/head';
 import AppShell from '../components/AppShell';
-import FAQ from '../sections/faqPage/FAQ';
-import { CustomerGrowth } from './about';
-import PageHeader from '../components/PageHeader';
+import TermsAndCondition from '../sections/termsAndCondition/TermsAndCondition';
 
-const Faqs = () => (
+const TermsAndConditionMain = () => (
   <>
     <Head>
       <meta
         name="description"
         content="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities."
       />
-      <meta name="title" property="og:title" content="Luxim FAQs" />
+      <meta name="title" property="og:title" content="Luxim Terms and Conditions" />
       <meta name="type" property="og:type" content="website" />
       <meta
         name="image"
@@ -27,7 +25,7 @@ const Faqs = () => (
 
       {/* Twitter tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Luxim FAQs" />
+      <meta name="twitter:title" content="Luxim Terms and Conditions" />
       <meta
         name="twitter:description"
         content="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities."
@@ -41,15 +39,9 @@ const Faqs = () => (
       />
     </Head>
     <AppShell>
-      <PageHeader
-        title="Support"
-        subTitle="Everything you need to know"
-        text="Need something cleared up? Here are our most frequently asked questions."
-      />
-      <FAQ />
-      <CustomerGrowth />
+      <TermsAndCondition />
     </AppShell>
   </>
 );
 
-export default Faqs;
+export default TermsAndConditionMain;
