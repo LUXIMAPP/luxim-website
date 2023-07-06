@@ -16,8 +16,10 @@ const useJoinWaitList = (setUserEmail) => {
       .then((response) => {
         setLoader(false);
         toast({
-          title: response?.data?.message,
+          title: 'Congratulations!',
+          description: response?.data?.message,
           position: 'top-right',
+          variant: 'left-accent',
           status: 'success',
           isClosable: true,
         });
@@ -26,8 +28,10 @@ const useJoinWaitList = (setUserEmail) => {
       .catch((error) => {
         setLoader(false);
         toast({
-          title: error?.response?.data?.message,
+          title: 'Error!',
+          description: error?.response?.data?.message,
           position: 'top-right',
+          variant: 'left-accent',
           status: 'error',
           isClosable: true,
         });

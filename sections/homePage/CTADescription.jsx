@@ -26,7 +26,8 @@ const CTADescription = () => (
   <Box
     bgSize="cover"
     bgPosition="center"
-    py={{ base: 16, md: 20 }}
+    pb={{ base: 16, md: 20 }}
+    // py={{ base: 16, md: 20 }} add back when NavigationGuide section is in use
   >
     <Wrapper display="flex">
       <Box

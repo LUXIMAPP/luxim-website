@@ -4,11 +4,11 @@ const question = [
     answer:
       'We are an e-commerce platform that enables customers to buy and sell high-quality new or pre-owned traditional clothes at affordable prices in Nigeria.We are the nexus between heritage and sustainability, where buyers can browse and purchase items securely, while sellers can upload and sell their items with ease.',
   },
-  {
-    question: 'How do I create an account?',
-    answer:
-      'Please click on link and you will be directed to the app store LINK',
-  },
+  // {
+  //   question: 'How do I create an account?',
+  //   answer:
+  //     'Please click on link and you will be directed to the app store LINK',
+  // },
   {
     question: 'How does Luxim promote sustainable fashion practices?',
     answer:
@@ -39,11 +39,11 @@ const question = [
     answer:
       'Listing on Luxim is always free! After your item sells, we deduct a small fee from the final order price. For sales under N2000, the fee is a flat rate of N400. For sales above N2000, the fee is 16% and you keep 84%. This is how we maintain the cost of operations to provide our customers with a  safe and convenient retail experience.',
   },
-  {
-    question: 'How do I buy on Luxim? ',
-    answer:
-      'Click the link (imbed the link here) and create an account in 60 seconds or less  and begin shopping on Luxim ',
-  },
+  // {
+  //   question: 'How do I buy on Luxim? ',
+  //   answer:
+  //     'Click the link (imbed the link here) and create an account in 60 seconds or less  and begin shopping on Luxim ',
+  // },
   {
     question: 'What are the benefits of buying on Luxim? ',
     answer: `We make buying pre-owned fashion easy and secure! If you receive an item that arrives below our Standards, please email our team at <a href="mailto:hello@luximapp.com" style="font-weight: 800">hello@luximapp.com</a> within 24 hours of purchase delivery and we will aim to provide an amicable resolution.

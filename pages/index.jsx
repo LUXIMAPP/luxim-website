@@ -8,9 +8,10 @@ import About from '../sections/homePage/About';
 import CTADescription from '../sections/homePage/CTADescription';
 import AppShell from '../components/AppShell';
 import Hero from '../sections/homePage/Hero';
-import NavigationGuide from '../sections/homePage/NavigationGuide';
+// import NavigationGuide from '../sections/homePage/NavigationGuide';
 import CTA from '../sections/homePage/CTA';
-import ScanCode from '../sections/homePage/ScanCode';
+// import ScanCode from '../sections/homePage/ScanCode';
+import { calculateTimeLeft } from '../customHooks/useCountdown';
 
 const Home = () => {
   const router = useRouter();
@@ -18,6 +19,11 @@ const Home = () => {
     router.prefetch('/about');
     router.prefetch('/faqs');
   }, []);
+
+  const {
+    days, hours, minutes, seconds,
+  } = calculateTimeLeft();
+  const remainingTime = days + hours + minutes + seconds;
 
   return (
     <>
@@ -49,15 +55,15 @@ const Home = () => {
       <AppShell>
         <Box minHeight="100%">
           <Hero />
-          <CountDown />
+          {remainingTime > 0 ? <CountDown /> : null }
           <Box display={{ base: 'flex', md: 'block' }} flexDirection="column">
-            <NavigationGuide />
+            {/* <NavigationGuide /> add back when there's watch demo video */}
             <CTADescription />
             <CTA />
             <About />
           </Box>
         </Box>
-        <ScanCode />
+        {/* <ScanCode /> */}
       </AppShell>
     </>
   );

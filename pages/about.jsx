@@ -1,11 +1,11 @@
 import { Box, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 import AppShell from '../components/AppShell';
-import AboutHero from '../sections/aboutPage/AboutHero';
 import AboutStat from '../sections/aboutPage/AboutStat';
 import letter from '../sections/aboutPage/aboutLuximLetter';
 import FooterClosure from '../components/FooterClosure';
 import AppButton from '../components/AppButton';
+import PageHeader from '../components/PageHeader';
 
 export const CustomerGrowth = () => (
   <FooterClosure textAlign="center">
@@ -65,7 +65,7 @@ const About = () => (
       />
     </Head>
     <AppShell>
-      <AboutHero />
+      <PageHeader title="About us" subTitle="What you need to know about Luxim" />
       <AboutStat />
       <Box
         width={{ base: '100%', lg: '50vw' }}

@@ -80,6 +80,7 @@ const About = () => (
         flexDirection="row-reverse"
         justifyContent="space-between"
         mt={10}
+        mb={{ base: 10, lg: 0 }}
       >
         <Box width={{ sm: 'full', lg: '50%' }}>
           {features.map((item) => (

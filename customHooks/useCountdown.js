@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-const calculateTimeLeft = () => {
-  const targetDate = new Date('2023-07-01');
+export const calculateTimeLeft = () => {
+  const targetDate = new Date('2023-08-01');
   const currentDate = new Date();
   const difference = targetDate.getTime() - currentDate.getTime();
   let timeLeft = {};

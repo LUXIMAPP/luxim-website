@@ -2,16 +2,16 @@ import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+// import { useState } from 'react';
 import logo from '../public/navbar/logo.svg';
-import AppButton from './AppButton';
+// import AppButton from './AppButton';
 import Wrapper from './Wrapper';
 import HamburgerMenu from './HamburgerMenu';
-import Play from '../public/navbar/Play';
+// import Play from '../public/navbar/Play';
 
 const Navbar = () => {
   const router = useRouter();
-  const [isHover, setIsHover] = useState(false);
+  // const [isHover, setIsHover] = useState(false);
 
   return (
     <Box
@@ -56,27 +56,11 @@ const Navbar = () => {
               ))}
             </Box>
           </Box>
-          <Box display="flex">
+          <Box display="flex" py={3}>
+            {' '}
+            {/*  remove padding when watch demo is added */}
             <Box display="flex" gap={10} alignItems="center">
-              {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index === 2 ? (
-                <AppButton
-                  theme="brand.lemon"
-                  display="flex"
-                  alignItems="center"
-                  fontWeight="400"
-                  gap={3}
-                  key={list}
-                  p={{ base: 2, lg: 6 }}
-                  onMouseEnter={() => setIsHover(true)}
-                  onMouseLeave={() => setIsHover(false)}
-                  isHover={isHover}
-                >
-                  <Play color={isHover ? 'white' : '#102816'} />
-                  <Link href={`${list.link}`}>
-                    <a className={`text-${isHover ? 'white' : 'black'} min-[360px]:text-xs lg:text-lg`} key={list.title}>{list.title}</a>
-                  </Link>
-                </AppButton>
-              ) : (
+              {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index !== 2 ? (
                 <ListItem key={list} display={{ base: 'none', lg: 'flex' }}>
                   <Link href={`${list.link}`}>
                     <a
@@ -90,6 +74,25 @@ const Navbar = () => {
                     </a>
                   </Link>
                 </ListItem>
+              ) : (null
+              // <AppButton
+              //   theme="brand.lemon"
+              //   display="flex"
+              //   alignItems="center"
+              //   fontWeight="400"
+              //   gap={3}
+              //   key={list}
+              //   p={{ base: 2, lg: 6 }}
+              //   onMouseEnter={() => setIsHover(true)}
+              //   onMouseLeave={() => setIsHover(false)}
+              //   isHover={isHover}
+              // >
+              //   <Play color={isHover ? 'white' : '#102816'} />
+              //   <Link href={`${list.link}`}>
+              //     <a className={`text-${isHover ? 'white' : 'black'}
+              // min-[360px]:text-xs lg:text-lg`} key={list.title}>{list.title}</a>
+              //   </Link>
+              // </AppButton>
               )))}
             </Box>
             <Box display={{ base: 'block', lg: 'none' }} width="35px"><HamburgerMenu /></Box>
