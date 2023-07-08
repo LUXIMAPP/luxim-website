@@ -17,7 +17,7 @@ const ScanCode = () => (
         <Text fontWeight="600" fontSize={{ base: '24px', lg: '30px' }} mb={4} as="h4">
           Scan the QR Code to download
         </Text>
-        <Text>Join over 4,000+ customers already growing with Luxim.</Text>
+        <Text>Join the Luxim community that’s changing lives- Inspiration lives here!</Text>
       </Box>
       <Box
         display="flex"

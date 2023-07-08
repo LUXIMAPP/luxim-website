@@ -69,10 +69,14 @@ const TimerContainer = ({
           { num: minutes, unit: 'Minutes', flip: minutesFlip },
           { num: seconds, unit: 'Seconds', flip: secondsFlip },
         ].map((item, index) => (
-          <Box key={item.unit}>
-            <Box display="flex" alignItems="center" width={index === 3 ? '4vw' : 'fit-content'}>
-              <NumberBox num={item.num} flip={item.flip} />
-              <Text as="span" display={index === 3 ? 'none' : 'block'}>:</Text>
+          <Box key={item.unit} display="grid" gridTemplateColumns="repeat(2, .25fr)" gridTemplateRows="repeat(2, .5fr)" alignItems="center">
+            <Box display="flex" flexDirection="column" justifyContent="center">
+              <Box display="flex" alignItems="center" width={index === 3 ? '5vw' : 'fit-content'}>
+                <NumberBox num={item.num} flip={item.flip} />
+              </Box>
+            </Box>
+            <Box>
+              <Text display={index === 3 ? 'none' : 'block'}>:</Text>
             </Box>
             <Text
               className="text-black"

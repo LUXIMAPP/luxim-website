@@ -50,29 +50,18 @@ const About = () => (
           <Text as="span" mr={2} color="brand.secondary">
             Luxim
           </Text>
-          -  social and secure experience to shop for traditional fashion
+          - social and secure experience to shop for traditional fashion
         </Text>
         <Text
           fontWeight="400"
           fontSize={{ base: '17px', lg: '18px' }}
           color="brand.grey"
           lineHeight={{ base: '24px', lg: '32px' }}
-          display={{ base: 'none', md: 'block' }}
         >
-          Luxim is more than just a marketplace, luxim is a community creating
-          opportunities to earn income, inspire others through thier unique
-          style and reduce clothing waste along the way
-        </Text>
-        <Text
-          fontWeight="400"
-          fontSize={{ base: '17px', lg: '18px' }}
-          color="brand.grey"
-          lineHeight={{ base: '24px', lg: '32px' }}
-          display={{ base: 'block', md: 'none' }}
-
-        >
-          Community of traditional fashion enthusiasts can connect, inspire, and
-          create opportunities to earn income while reducing clothing waste.
+          Luxim- Social and secure experience to shop for traditional fashion.
+          We’re a community of traditional fashion enthusiasts, where we
+          connect, inspire, and create opportunities to earn income, while
+          actively reducing clothing waste.
         </Text>
       </Box>
       <Box

@@ -36,7 +36,8 @@ const Hero = () => {
         display="flex"
         flexDirection={{ base: 'column', lg: 'row' }}
         alignItems="center"
-        gap={{ base: 0, lg: 32 }}
+        justifyContent="space-between"
+        // gap={{ base: 0, lg: 28 }}
         mt={{ base: 10, lg: 16 }}
         mb={{ base: 8, md: 12 }}
         pb={{ base: 10, lg: 32 }}
@@ -50,13 +51,15 @@ const Hero = () => {
               lineHeight={{ base: '40px', lg: '80px' }}
               mb={{ base: 4, lg: 6 }}
             >
-              Buy . Sell . Discover
+              Buy . Sell . Reimagine
               {' '}
               <br />
               {' '}
               Your
               {' '}
-              <Box as="span" color="brand.secondary">Style</Box>
+              <Box as="span" color="brand.secondary">
+                Style
+              </Box>
             </Text>
             <Text
               fontWeight={{ base: '500', lg: '400' }}
@@ -65,9 +68,10 @@ const Hero = () => {
               fontSize={{ base: '15px', lg: '18px' }}
               mb={8}
             >
-              Sell designer, vintage, preloved, latest trends, event attire and
-              more. Whatever your style, sell and shop on Luxim– the social
-              marketplace app connecting the fashion community.
+              A virtual marketplace for preloved traditional fashion, vintage
+              pieces, latest trends, and much more. Whatever your style, buy and
+              sell unique pieces on Luxim, the ultimate social marketplace app
+              that connects fashion enthusiasts for unique fashion finds.
             </Text>
             <form onSubmit={(e) => joinWaitlist((e, userEmail))}>
               <Box
@@ -79,6 +83,7 @@ const Hero = () => {
                   zIndex="20"
                   placeholder="Enter your email"
                   fontSize="12px"
+                  width={{ base: '100%', lg: '70%' }}
                   style={{ padding: '0.5rem', height: '3.15rem' }}
                   onChange={(e) => setUserEmail(e.target.value)}
                   value={userEmail}
@@ -94,7 +99,13 @@ const Hero = () => {
                 />
               </Box>
             </form>
-            <Box display="flex" width={{ base: '100%', lg: '25vw' }} mt={12} gap={4} justifyContent="center">
+            <Box
+              display="flex"
+              width={{ base: '100%', lg: '30vw' }}
+              mt={12}
+              gap={4}
+              justifyContent="center"
+            >
               <AppButton
                 width="full"
                 display="flex"
@@ -110,7 +121,7 @@ const Hero = () => {
                 <Box>
                   <AppleLogo color={isAppleLogoHovered ? 'white' : 'black'} />
                 </Box>
-                <Text>Get the App</Text>
+                <Text fontSize={{ base: '14px', lg: '16px' }}>Download the App</Text>
               </AppButton>
               <AppButton
                 width="full"
@@ -124,14 +135,16 @@ const Hero = () => {
                 onClick={toastBody}
               >
                 <Box>
-                  <AndriodLogo color={isAndriodLogoHovered ? 'white' : 'black'} />
+                  <AndriodLogo
+                    color={isAndriodLogoHovered ? 'white' : 'black'}
+                  />
                 </Box>
-                <Text>Get the App</Text>
+                <Text fontSize={{ base: '14px', lg: '16px' }}>Download the App</Text>
               </AppButton>
             </Box>
           </Box>
         </Box>
-        <Box width="50%" zIndex={1} display={{ base: 'none', lg: 'block' }}>
+        <Box width="45%" zIndex={1} display={{ base: 'none', lg: 'block' }}>
           <Image src={heroImg} alt="hero section image" />
         </Box>
         <Box mt={10} display={{ base: 'block', lg: 'none' }}>

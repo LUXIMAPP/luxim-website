@@ -3,22 +3,23 @@ import Image from 'next/image';
 import Wrapper from '../../components/Wrapper';
 import CTAbackground from '../../public/homePage/CTADetails/CTAbackground.svg';
 import MobilePhoto from '../../public/homePage/CTADetails/CTAMobilePhoto.png';
+import NumberedListBox from '../../components/NumberedListBox';
 
 const sellYourWaySection = [
   {
     number: '1',
-    title: 'List It',
-    text: 'It’s that easy! Take a photo and upload to your closet in less than 60 seconds–right from your phone!',
+    title: 'Sell it',
+    text: 'Listing your items on Luxim is a breeze! With just a few simple steps, take a photo of your items and simply upload it to your virtual closet in under 60 seconds- all conveniently done from your phone!',
   },
   {
     number: '2',
     title: 'Share It',
-    text: 'Share listings to your network for shoppers to discover! The more you share, the more sales you generate. Ching ching!!',
+    text: 'Spread the word and share your listing with your network, allowing shoppers to discover your incredible item! By actively sharing your lisings, you increase your chances of generating more sales and hearing the sweet sound of sale-Ching Ching!',
   },
   {
     number: '3',
     title: 'Earn Cash',
-    text: 'Shipping made easy with our pre-paid label, cash in your pocket when the item is delivered!',
+    text: 'We provide you a hassle-free shipping process, from pick up to delivery. Once the item is delivered and verified, you can enjoy the joy of money in your pocket!',
   },
 ];
 
@@ -27,15 +28,15 @@ const CTADescription = () => (
     bgSize="cover"
     bgPosition="center"
     pb={{ base: 16, md: 20 }}
-    // py={{ base: 16, md: 20 }} add back when NavigationGuide section is in use
+    py={{ base: 16, md: 20 }}
   >
     <Wrapper display="flex">
       <Box
         bg="#E5F5E9"
         bgImage={`url(${CTAbackground.src})`}
-        py={{ base: 10, lg: 20 }}
-        px={{ base: 10, lg: 20 }}
-        borderRadius="30px"
+        py={{ base: 16, lg: 20 }}
+        px={{ base: 6, lg: 20 }}
+        borderRadius="4px"
         display="flex"
         alignItems="center"
         flexDirection={{ base: 'column', lg: 'row' }}
@@ -46,36 +47,17 @@ const CTADescription = () => (
         <Box width={{ base: '100%', lg: '50vw' }}>
           <Image src={MobilePhoto} />
         </Box>
-        <Box width={{ base: '100%', lg: '50vw' }}>
-          <Text fontWeight="700" fontSize={{ base: '32px', lg: '40px' }} mb={8} as="h2">Sell Your Way</Text>
+        <Box width={{ base: '100%', lg: '50vw' }} mt={{ base: 20, lg: 0 }}>
+          <Text
+            fontWeight="700"
+            fontSize={{ base: '32px', lg: '40px' }}
+            mb={8}
+            as="h2"
+          >
+            Sell Your Way
+          </Text>
           {sellYourWaySection.map((item) => (
-            <Box
-              display="flex"
-              fontWeight="500"
-              alignItems="start"
-              mt={4}
-              gap={4}
-              key={item.title}
-            >
-              <Box width="fit-content" height="32px" display="flex" alignItems="center">
-                <Box
-                  w={6}
-                  h={6}
-                  color="white"
-                  bg="brand.primary1"
-                  borderRadius="full"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Text fontSize="14px" lineHeight="32px">{item.number}</Text>
-                </Box>
-              </Box>
-              <Box>
-                <Text fontSize={{ base: '18px', lg: '20px' }} mb={2} as="h3">{item.title}</Text>
-                <Text color="brand.grey" lineHeight="24px" mb={11}>{item.text}</Text>
-              </Box>
-            </Box>
+            <NumberedListBox item={item} />
           ))}
         </Box>
       </Box>
