@@ -10,9 +10,9 @@ import PageHeader from '../components/PageHeader';
 export const CustomerGrowth = () => (
   <FooterClosure textAlign="center">
     <Text fontSize="30px" lineHeight="38px" fontWeight="600" mb={4} as="h4">
-      Still have questions?
+      Join over 4,000+ customers already growing with Luxim.
     </Text>
-    <Text mb={8}>Join over 4,000+ customers already growing with Luxim.</Text>
+    <Text mb={8} fontSize="18px">Still have questions?</Text>
     <Box
       display="flex"
       gap={3}

@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Head from 'next/head';
@@ -8,7 +8,7 @@ import About from '../sections/homePage/About';
 import CTADescription from '../sections/homePage/CTADescription';
 import AppShell from '../components/AppShell';
 import Hero from '../sections/homePage/Hero';
-// import NavigationGuide from '../sections/homePage/NavigationGuide';
+import NavigationGuide from '../sections/homePage/NavigationGuide';
 import CTA from '../sections/homePage/CTA';
 // import ScanCode from '../sections/homePage/ScanCode';
 import { calculateTimeLeft } from '../customHooks/useCountdown';
@@ -28,22 +28,38 @@ const Home = () => {
   return (
     <>
       <Head>
-        <meta name="description" content="Sell designer, vintage, preloved, latest trends, event attire and more" />
-        <meta name="title" property="og:title" content="Luxim | Buy . Sell . Discover Your Style." />
+        <meta
+          name="description"
+          content="Sell designer, vintage, preloved, latest trends, event attire and more"
+        />
+        <meta
+          name="title"
+          property="og:title"
+          content="Luxim | Buy . Sell . Discover Your Style."
+        />
         <meta name="type" property="og:type" content="website" />
         <meta
           name="image"
           property="og:image"
           content="https://luxim-images.s3.us-east-2.amazonaws.com/mainLoginImg.webp"
         />
-        <meta property="og:description" content="Sell designer, vintage, preloved, latest trends, event attire and more" />
+        <meta
+          property="og:description"
+          content="Sell designer, vintage, preloved, latest trends, event attire and more"
+        />
         <meta name="author" content="Luxim" />
         <meta property="og:site_name" content="Luxim" />
 
         {/* Twitter tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Luxim | Buy . Sell . Discover Your Style." />
-        <meta name="twitter:description" content="Sell designer, vintage, preloved, latest trends, event attire and more" />
+        <meta
+          name="twitter:title"
+          content="Luxim | Buy . Sell . Discover Your Style."
+        />
+        <meta
+          name="twitter:description"
+          content="Sell designer, vintage, preloved, latest trends, event attire and more"
+        />
         <meta name="twitter:site" content="@Luxim" />
         <meta name="twitter:creator" content="@Luxim" />
         <meta name="twitter:image:alt" content="Luxim" />
@@ -55,14 +71,31 @@ const Home = () => {
       <AppShell>
         <Box minHeight="100%">
           <Hero />
-          {remainingTime > 0 ? <CountDown /> : null }
+          {remainingTime > 0 ? <CountDown /> : null}
           <Box display={{ base: 'flex', md: 'block' }} flexDirection="column">
-            {/* <NavigationGuide /> add back when there's watch demo video */}
+            <NavigationGuide />
             <CTADescription />
             <CTA />
             <About />
           </Box>
         </Box>
+        <Text
+          mb={{ base: 10, lg: 20 }}
+          fontSize={{ base: '26px', lg: '30px' }}
+          textAlign="center"
+          fontWeight="600"
+        >
+          Join the
+          {' '}
+          <Text as="span" color="brand.secondary">
+            Luxim
+            {' '}
+          </Text>
+          community that’s changing lives
+          {' '}
+          <br />
+          Inspiration lives here!
+        </Text>
         {/* <ScanCode /> */}
       </AppShell>
     </>

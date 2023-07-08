@@ -17,7 +17,7 @@ const Navbar = () => {
     <Box
       bg="brand.primary1"
       color="white"
-      py={3}
+      py={{ base: 0, lg: 3 }}
       position="sticky"
       top={0}
       zIndex="100"
@@ -40,7 +40,7 @@ const Navbar = () => {
                 { title: 'About Us', link: '/about' },
                 // { title: 'Blog', link: '/#blog' },
               ].map((list) => (
-                <ListItem key={list.title}>
+                <ListItem key={list.title} textTransform="uppercase">
                   <Link href={`${list.link}`}>
                     <a
                       className={
@@ -61,7 +61,7 @@ const Navbar = () => {
             {/*  remove padding when watch demo is added */}
             <Box display="flex" gap={10} alignItems="center">
               {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index !== 2 ? (
-                <ListItem key={list} display={{ base: 'none', lg: 'flex' }}>
+                <ListItem key={list} display={{ base: 'none', lg: 'flex' }} textTransform="uppercase">
                   <Link href={`${list.link}`}>
                     <a
                       className={

@@ -25,7 +25,7 @@ const PrivacyPolicy = () => (
           using the Service, You agree to the collection and use of information in
           accordance with this Privacy Policy.`,
         ].map((text, index) => (
-          <Text key={index} fontSize="18px" fontWeight="400" lineHeight="30px" textColor="#879099">
+          <Text key={index} fontSize="18px" fontWeight="400" lineHeight="30px">
             {text}
           </Text>
         ))}
@@ -43,23 +43,28 @@ const PrivacyPolicy = () => (
             >
               {item.title}
             </Text>
-            <Text
-              my={4}
+            {item.text ? (
+              <Text
+                my={4}
               // fontSize="18px"
-              dangerouslySetInnerHTML={{ __html: item.text }}
-            />
+                dangerouslySetInnerHTML={{ __html: item.text }}
+              />
+            ) : null}
             {item.sections.map((subSection, subIndex) => (
               <Box key={subIndex}>
-                <Text
-                  fontSize="24px"
-                  fontWeight="600"
-                  lineHeight="32px"
-                  mt={10}
-                  as="h3"
-                >
-                  {subSection.subTitle}
-                </Text>
-                <Text fontSize="18px" fontWeight="600" lineHeight="28px" as="h4">
+                {subSection.subTitle ? (
+                  <Text
+                    fontSize="24px"
+                    fontWeight="600"
+                    lineHeight="32px"
+                    mt={4}
+                    as="h3"
+                  >
+                    {subSection.subTitle}
+                  </Text>
+                ) : null}
+
+                <Text fontSize="18px" fontWeight="600" lineHeight="28px" as="h4" my={2}>
                   {subSection.heading}
                 </Text>
                 <Box my={4}>

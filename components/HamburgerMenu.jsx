@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
               { title: 'FAQs', link: '/faqs' },
               { title: 'Contact', link: '/#contact' },
             ].map((list) => (
-              <ListItem key={list.title}>
+              <ListItem key={list.title} textTransform="uppercase">
                 <Link href={`${list.link}`}>
                   <a
                     className={

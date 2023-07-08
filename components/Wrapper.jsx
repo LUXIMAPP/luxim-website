@@ -8,6 +8,8 @@ const Wrapper = ({
     paddingLeft={showLeftPadding ?? { base: 6, md: 36 }}
     paddingRight={showRightPadding ?? { base: 6, md: 32 }}
     {...rest}
+    maxWidth="1800px"
+    marginX="auto"
   >
     {children}
   </Box>
