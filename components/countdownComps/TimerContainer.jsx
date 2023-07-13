@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { Box, Text } from '@chakra-ui/react';
 import NumberBox from './NumberBox';
 
 const TimerContainer = ({
-  days, hours, minutes, seconds, setSeconds, setMinutes, setHours, setDays,
+  days,
+  hours,
+  minutes,
+  seconds,
+  setSeconds,
+  setMinutes,
+  setHours,
+  setDays,
 }) => {
   const [daysFlip, setDaysFlip] = useState(false);
   const [hoursFlip, setHoursFlip] = useState(false);
@@ -33,22 +41,56 @@ const TimerContainer = ({
         setDaysFlip(true);
       }
     }
-  }, [seconds, days, minutes, hours, setSeconds, setMinutes, setHours, setDays]);
+  }, [
+    seconds,
+    days,
+    minutes,
+    hours,
+    setSeconds,
+    setMinutes,
+    setHours,
+    setDays,
+  ]);
 
   return (
-
-    <div className="text-white font-germania rounded-xl">
-      <div className="grid grid-cols-2 gap-1 py-0 px-10 md:flex md:items-center md:justify-between rounded-xl md:px-6 md:py-8 ">
-        <NumberBox num={days} unit="Days" flip={daysFlip} />
-        <span className=" hidden text-5xl -mt-8 md:inline-block md:text-7xl font-normal text-white">:</span>
-        <NumberBox num={hours} unit="Hours" flip={hoursFlip} />
-        <span className="hidden text-5xl -mt-8 md:inline-block md:text-7xl font-normal text-white">:</span>
-        <NumberBox num={minutes} unit="Minutes" flip={minutesFlip} />
-        <span className="hidden text-5xl -mt-8 md:inline-block md:text-7xl font-normal text-white">:</span>
-        <NumberBox num={seconds} unit="Seconds" flip={secondsFlip} />
-      </div>
-
-    </div>
+    <Box width="fit-content" m="0 auto" bg="white" pl={{ base: 3, lg: 32 }} pr={{ base: 6, lg: 32 }}>
+      <Text color="black" textAlign="center" fontSize={{ base: '18px', lg: '20px' }}>Countdown to Launching</Text>
+      <Box
+        className="text-black rounded-xl"
+        fontWeight="700"
+        fontSize={{ base: '20px', lg: '32px' }}
+        lineHeight="40.32px"
+        display="flex"
+        justifyContent="center"
+      >
+        {[
+          { num: days, unit: 'Days', flip: daysFlip },
+          { num: hours, unit: 'Hours', flip: hoursFlip },
+          { num: minutes, unit: 'Minutes', flip: minutesFlip },
+          { num: seconds, unit: 'Seconds', flip: secondsFlip },
+        ].map((item, index) => (
+          <Box key={item.unit} display="grid" gridTemplateColumns="repeat(2, .25fr)" gridTemplateRows="repeat(2, .5fr)" alignItems="center">
+            <Box display="flex" flexDirection="column" justifyContent="center">
+              <Box display="flex" alignItems="center" width={index === 3 ? '5vw' : 'fit-content'}>
+                <NumberBox num={item.num} flip={item.flip} />
+              </Box>
+            </Box>
+            <Box>
+              <Text display={index === 3 ? 'none' : 'block'}>:</Text>
+            </Box>
+            <Text
+              className="text-black"
+              textAlign="center"
+              fontSize="12px"
+              fontWeight="400"
+              lineHeight="15.12px"
+            >
+              {item.unit}
+            </Text>
+          </Box>
+        ))}
+      </Box>
+    </Box>
   );
 };
 
