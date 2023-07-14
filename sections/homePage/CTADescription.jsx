@@ -1,8 +1,8 @@
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Wrapper from '../../components/Wrapper';
-import CTAbackground from '../../public/homePage/CTADetails/CTAbackground.svg';
-import MobilePhoto from '../../public/homePage/CTADetails/CTAMobilePhoto.png';
+import CTAbackground from '../../public/images&svgs/homePage/CTADetails/CTAbackground.svg';
+import MobilePhoto from '../../public/images&svgs/homePage/CTADetails/CTAMobilePhoto.png';
 import NumberedListBox from '../../components/NumberedListBox';
 
 const sellYourWaySection = [

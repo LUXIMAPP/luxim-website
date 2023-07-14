@@ -1,8 +1,8 @@
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import buyCard from '../../public/homePage/CTADetails/buyCard.jpg';
-import shopCard from '../../public/homePage/CTADetails/shopCard.jpg';
-import sellCard from '../../public/homePage/CTADetails/sellCard.jpg';
+import buyCard from '../../public/images&svgs/homePage/CTADetails/buyCard.jpg';
+import shopCard from '../../public/images&svgs/homePage/CTADetails/shopCard.jpg';
+import sellCard from '../../public/images&svgs/homePage/CTADetails/sellCard.jpg';
 import Wrapper from '../../components/Wrapper';
 
 const CTADescription = () => (

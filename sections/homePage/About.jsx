@@ -1,6 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import about from '../../public/homePage/about/about.png';
+import about from '../../public/images&svgs/homePage/about/about.png';
 import Wrapper from '../../components/Wrapper';
 import features from './luximFeatures';
 

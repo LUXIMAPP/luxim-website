@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 // import { useState } from 'react';
-import logo from '../public/navbar/logo.svg';
+import logo from '../public/images&svgs/navbar/logo.svg';
 // import AppButton from './AppButton';
 import Wrapper from './Wrapper';
 import HamburgerMenu from './HamburgerMenu';
@@ -32,7 +32,11 @@ const Navbar = () => {
         >
           <Box display="flex" gap={8}>
             <Box width="87.25px" height="auto">
-              <Image src={logo} alt="luxim app logo" layout="responsive" />
+              <Link href="/">
+                <a>
+                  <Image src={logo} alt="luxim app logo" layout="responsive" />
+                </a>
+              </Link>
             </Box>
             <Box display={{ base: 'none', lg: 'flex' }} gap={10}>
               {[

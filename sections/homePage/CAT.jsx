@@ -2,10 +2,10 @@ import { Box, Text, useToast } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useState } from 'react';
 import AppButton from '../../components/AppButton';
-import andriodLogo from '../../public/homePage/CTA/andriod-logo.svg';
-import AppleLogo from '../../public/homePage/CTA/AppleLogo';
-import mobile from '../../public/homePage/CTA/mockup-min.png';
-import footerImgMobile from '../../public/homePage/CTA/footerImgMobile.png';
+import andriodLogo from '../../public/images&svgs/homePage/CTA/andriod-logo.svg';
+import AppleLogo from '../../public/images&svgs/homePage/CTA/AppleLogo';
+import mobile from '../../public/images&svgs/homePage/CTA/mockup-min.png';
+import footerImgMobile from '../../public/images&svgs/homePage/CTA/footerImgMobile.png';
 import Wrapper from '../../components/Wrapper';
 
 const CAT = () => {
