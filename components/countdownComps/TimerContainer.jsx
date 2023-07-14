@@ -53,8 +53,20 @@ const TimerContainer = ({
   ]);
 
   return (
-    <Box width="fit-content" m="0 auto" bg="white" pl={{ base: 3, lg: 32 }} pr={{ base: 6, lg: 32 }}>
-      <Text color="black" textAlign="center" fontSize={{ base: '18px', lg: '20px' }}>Countdown to Launching</Text>
+    <Box
+      width="fit-content"
+      m="0 auto"
+      bg="white"
+      pl={{ base: 3, lg: 32 }}
+      pr={{ base: 6, lg: 32 }}
+    >
+      <Text
+        color="black"
+        textAlign="center"
+        fontSize={{ base: '18px', lg: '20px' }}
+      >
+        Countdown to Launching
+      </Text>
       <Box
         className="text-black rounded-xl"
         fontWeight="700"
@@ -69,15 +81,23 @@ const TimerContainer = ({
           { num: minutes, unit: 'Minutes', flip: minutesFlip },
           { num: seconds, unit: 'Seconds', flip: secondsFlip },
         ].map((item, index) => (
-          <Box key={item.unit} display="grid" gridTemplateColumns="repeat(2, .25fr)" gridTemplateRows="repeat(2, .5fr)" alignItems="center">
+          <Box
+            key={item.unit}
+            display="grid"
+            gridTemplateColumns={index !== 3 ? 'repeat(2, .2fr)' : '.1fr'}
+            gridTemplateRows="repeat(2, .5fr)"
+            alignItems="center"
+          >
             <Box display="flex" flexDirection="column" justifyContent="center">
-              <Box display="flex" alignItems="center" width={index === 3 ? '5vw' : 'fit-content'}>
+              <Box
+                display="flex"
+                alignItems="center"
+                width={{ base: '15vw', md: '8vw', lg: '4vw' }}
+              >
                 <NumberBox num={item.num} flip={item.flip} />
               </Box>
             </Box>
-            <Box>
-              <Text display={index === 3 ? 'none' : 'block'}>:</Text>
-            </Box>
+            {index !== 3 ? <Text>:</Text> : null}
             <Text
               className="text-black"
               textAlign="center"

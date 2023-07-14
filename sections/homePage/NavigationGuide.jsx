@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import Wrapper from '../../components/Wrapper';
 import AppButton from '../../components/AppButton';
-import correctIcon from '../../public/homePage/navigationGuide/correctIcon.svg';
+import correctIcon from '../../public/images&svgs/homePage/navigationGuide/correctIcon.svg';
 import NumberedListBox from '../../components/NumberedListBox';
 
 const NavigationGuide = () => {

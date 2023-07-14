@@ -9,8 +9,8 @@ import {
 } from '@chakra-ui/react';
 
 import Image from 'next/image';
-import plusIcon from '../../public/faq/plus-circle.svg';
-import minusIcon from '../../public/faq/minus-circle.svg';
+import plusIcon from '../../public/images&svgs/faq/plus-circle.svg';
+import minusIcon from '../../public/images&svgs/faq/minus-circle.svg';
 import question from './question';
 
 const FAQ = () => {
