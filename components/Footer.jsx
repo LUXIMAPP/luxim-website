@@ -5,12 +5,12 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import footerLogo from '../public/footer/footer-logo.svg';
-import facebook from '../public/footer/Facebook logo.svg';
-import twitter from '../public/footer/Twitter logo.svg';
-import instagram from '../public/footer/Instagram logo.svg';
-import linkedin from '../public/footer/LinkedIn logo.svg';
-// import youtube from '../public/footer/YouTube logo.svg';
+import footerLogo from '../public/images&svgs/footer/footer-logo.svg';
+import facebook from '../public/images&svgs/footer/Facebook logo.svg';
+import twitter from '../public/images&svgs/footer/Twitter logo.svg';
+import instagram from '../public/images&svgs/footer/Instagram logo.svg';
+import linkedin from '../public/images&svgs/footer/LinkedIn logo.svg';
+// import youtube from '../public/images&svgs/footer/YouTube logo.svg';
 import Wrapper from './Wrapper';
 
 const Footer = () => {

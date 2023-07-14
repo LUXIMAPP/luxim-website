@@ -1,17 +1,15 @@
 import { Box, Text, useToast } from '@chakra-ui/react';
 import Image from 'next/image';
-import { useState } from 'react';
 import AppButton from '../../components/AppButton';
-import andriodLogo from '../../public/homePage/CTA/andriod-logo.svg';
-import AppleLogo from '../../public/homePage/CTA/AppleLogo';
+import appleStore from '../../public/images&svgs/appStore.svg';
+import googlePlay from '../../public/images&svgs/googlePlay.svg';
 // import mobile from '../../public/homePage/CTA/mockup-min.png';
 // import footerImgMobile from '../../public/homePage/CTA/footerImgMobile.png';
-import closetImage from '../../public/homePage/CTA/CTAclosetImage.png';
+import closetImage from '../../public/images&svgs/homePage/CTA/CTaclosetImage.png';
 // import mobileImageSmall from '../../public/homePage/CTA/mobileImageSmall.png';
 import Wrapper from '../../components/Wrapper';
 
 const CTA = () => {
-  const [isHovered, setIsHover] = useState(false);
   const toast = useToast();
   const toastBody = () => {
     toast({
@@ -43,37 +41,45 @@ const CTA = () => {
             </Text>
           </Box>
           <Box display={{ base: 'block', md: 'flex' }} gap={4} justifyContent="center" width={{ base: '100%', lg: '70%' }}>
-            <AppButton
-              width="full"
+            <Box
               display="flex"
-              gap={2}
-              bg="transparent"
-              border="1px solid"
-              _hover={{ color: 'brand.lemon', bg: 'black' }}
-              onMouseEnter={() => setIsHover(true)}
-              onMouseLeave={() => setIsHover(false)}
-              mb={{ base: 3, lg: 0 }}
-              onClick={toastBody}
+              width={{ base: '100%', lg: '30vw' }}
+              mt={12}
+              gap={4}
+              justifyContent={{ base: 'center', lg: 'start' }}
             >
-              <Box>
-                <AppleLogo color={isHovered ? '#F6F8D3' : '#1C1D1F'} />
-              </Box>
-              <Text>Get on iPhone</Text>
-            </AppButton>
-            <AppButton
-              width="full"
-              display="flex"
-              gap={2}
-              bg="transparent"
-              border="1px solid"
-              _hover={{ color: 'brand.lemon', bg: 'black' }}
-              onClick={toastBody}
-            >
-              <Box>
-                <Image src={andriodLogo} alt="playstore logo icon" />
-              </Box>
-              <Text>Get on Android</Text>
-            </AppButton>
+              {[
+                {
+                  link: '#',
+                  image: appleStore,
+                  id: 'apple-store',
+                  alt: 'download for apple store button',
+                },
+                {
+                  link: '#',
+                  image: googlePlay,
+                  id: 'google-play',
+                  alt: 'download for google play store button',
+                },
+              ].map((button) => (
+                <Box id={button.id}>
+                  <AppButton
+                    width="full"
+                    bg="transparent"
+                    border="none"
+                    _hover={{
+                      bg: 'none',
+                      filter: 'drop-shadow(0px 0px 2px rgba(0,0,0,0.75))',
+                    }}
+                    padding="0"
+                    mb={{ base: 3, lg: 0 }}
+                    onClick={toastBody}
+                  >
+                    <Image src={button.image} alt={button.alt} />
+                  </AppButton>
+                </Box>
+              ))}
+            </Box>
           </Box>
         </Box>
         <Box mt={{ base: 10, lg: 0 }} justifyContent="center" width="100%">

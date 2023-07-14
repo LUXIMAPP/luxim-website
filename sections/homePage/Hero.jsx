@@ -4,18 +4,16 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useState } from 'react';
-import heroImg from '../../public/homePage/hero/hero.png';
-import heroImgMobile from '../../public/homePage/hero/heroImgMobile.jpg';
+import heroImg from '../../public/images&svgs/homePage/hero/hero.png';
+import heroImgMobile from '../../public/images&svgs/homePage/hero/heroImgMobile.jpg';
 import AppButton from '../../components/AppButton';
 import Wrapper from '../../components/Wrapper';
-import AppleLogo from '../../public/homePage/CTA/AppleLogo';
-import AndriodLogo from '../../public/homePage/hero/AndriodLogo';
+import appleStore from '../../public/images&svgs/appStore.svg';
+import googlePlay from '../../public/images&svgs/googlePlay.svg';
 import useJoinWaitList from './useJoinWaitList';
 
 const Hero = () => {
   const [userEmail, setUserEmail] = useState('');
-  const [isAppleLogoHovered, setAppleLogoHover] = useState(false);
-  const [isAndriodLogoHovered, setAndriodLogoHover] = useState(false);
   const { onClick: joinWaitlist, loader } = useJoinWaitList(setUserEmail);
   const toast = useToast();
   const toastBody = () => {
@@ -28,7 +26,6 @@ const Hero = () => {
       isClosable: true,
     });
   };
-  // bukola Egberongbe
 
   return (
     <Wrapper showRightPadding={{ base: 6, md: 32, lg: 0 }}>
@@ -104,43 +101,39 @@ const Hero = () => {
               width={{ base: '100%', lg: '30vw' }}
               mt={12}
               gap={4}
-              justifyContent="center"
+              justifyContent={{ base: 'center', lg: 'start' }}
             >
-              <AppButton
-                width="full"
-                display="flex"
-                gap={2}
-                bg="transparent"
-                border="1px solid"
-                _hover={{ color: 'white', bg: 'black' }}
-                onMouseEnter={() => setAppleLogoHover(true)}
-                onMouseLeave={() => setAppleLogoHover(false)}
-                mb={{ base: 3, lg: 0 }}
-                onClick={toastBody}
-              >
-                <Box>
-                  <AppleLogo color={isAppleLogoHovered ? 'white' : 'black'} />
+              {[
+                {
+                  link: '#',
+                  image: appleStore,
+                  id: 'apple-store',
+                  alt: 'download for apple store button',
+                },
+                {
+                  link: '#',
+                  image: googlePlay,
+                  id: 'google-play',
+                  alt: 'download for google play store button',
+                },
+              ].map((button) => (
+                <Box id={button.id}>
+                  <AppButton
+                    width="full"
+                    bg="transparent"
+                    border="none"
+                    _hover={{
+                      bg: 'none',
+                      filter: 'drop-shadow(0px 0px 2px rgba(0,0,0,0.75))',
+                    }}
+                    padding="0"
+                    mb={{ base: 3, lg: 0 }}
+                    onClick={toastBody}
+                  >
+                    <Image src={button.image} alt={button.alt} />
+                  </AppButton>
                 </Box>
-                <Text fontSize={{ base: '14px', lg: '16px' }}>Download the App</Text>
-              </AppButton>
-              <AppButton
-                width="full"
-                display="flex"
-                gap={2}
-                bg="transparent"
-                border="1px solid"
-                onMouseEnter={() => setAndriodLogoHover(true)}
-                onMouseLeave={() => setAndriodLogoHover(false)}
-                _hover={{ color: 'white', bg: 'black' }}
-                onClick={toastBody}
-              >
-                <Box>
-                  <AndriodLogo
-                    color={isAndriodLogoHovered ? 'white' : 'black'}
-                  />
-                </Box>
-                <Text fontSize={{ base: '14px', lg: '16px' }}>Download the App</Text>
-              </AppButton>
+              ))}
             </Box>
           </Box>
         </Box>

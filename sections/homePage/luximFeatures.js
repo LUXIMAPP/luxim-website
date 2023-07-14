@@ -1,4 +1,4 @@
-import line from '../../public/homePage/about/shorterLine.svg';
+import line from '../../public/images&svgs/homePage/about/shorterLine.svg';
 
 const features = [
   { number: '1', title: 'More than just fashion...' },

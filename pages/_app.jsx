@@ -31,7 +31,7 @@ const MyApp = ({ Component, pageProps }) => (
       <title>
         Luxim | Buy . Sell . Discover Your Style
       </title>
-      <link rel="shortcut icon" type="image/jpg" href="/luxim-logo.svg" />
+      <link rel="shortcut icon" type="image/jpg" href="/images&svgs/luxim-logo.svg" />
       <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     </Head>
     <ChakraProvider theme={theme}>
