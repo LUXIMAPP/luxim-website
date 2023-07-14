@@ -10,6 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+        with:
+          node-version: '16.19.0'
           
       - name: Get yarn cache directory path 🛠
         id: yarn-cache-dir-path
