@@ -1,4 +1,4 @@
-import { Box, Text, useToast } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useState } from 'react';
 import AppButton from '../../components/AppButton';
@@ -7,20 +7,10 @@ import AppleLogo from '../../public/images&svgs/homePage/CTA/AppleLogo';
 import mobile from '../../public/images&svgs/homePage/CTA/mockup-min.png';
 import footerImgMobile from '../../public/images&svgs/homePage/CTA/footerImgMobile.png';
 import Wrapper from '../../components/Wrapper';
+import { DisplayInfoToast } from '../faqPage/FAQ';
 
 const CAT = () => {
   const [isHovered, setIsHover] = useState(false);
-  const toast = useToast();
-  const toastBody = () => {
-    toast({
-      title: 'Note!',
-      description: 'This will be available on the launch date.',
-      status: 'info',
-      position: 'top-right',
-      variant: 'left-accent',
-      isClosable: true,
-    });
-  };
   return (
     <Box pt={{ base: 20, md: 28 }} mt={{ base: 4, md: 35 }} bg="brand.lemon">
       <Wrapper>
@@ -52,7 +42,7 @@ const CAT = () => {
               onMouseEnter={() => setIsHover(true)}
               onMouseLeave={() => setIsHover(false)}
               mb={{ base: 3, md: 0 }}
-              onClick={toastBody}
+              onClick={DisplayInfoToast}
             >
               <AppleLogo color={isHovered ? '#F6F8D3' : '#1C1D1F'} />
               <Text>Get on iPhone</Text>
@@ -64,7 +54,7 @@ const CAT = () => {
               bg="transparent"
               border="1px solid"
               _hover={{ color: 'brand.lemon', bg: 'black' }}
-              onClick={toastBody}
+              onClick={DisplayInfoToast}
             >
               <Image src={andriodLogo} alt="playstore logo icon" />
               <Text>Get on Android</Text>

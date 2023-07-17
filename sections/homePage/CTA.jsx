@@ -1,4 +1,4 @@
-import { Box, Text, useToast } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import AppButton from '../../components/AppButton';
 import appleStore from '../../public/images&svgs/appStore.svg';
@@ -8,19 +8,10 @@ import googlePlay from '../../public/images&svgs/googlePlay.svg';
 import closetImage from '../../public/images&svgs/homePage/CTA/CTaclosetImage.png';
 // import mobileImageSmall from '../../public/homePage/CTA/mobileImageSmall.png';
 import Wrapper from '../../components/Wrapper';
+import { useDisplayInfoToast } from '../faqPage/FAQ';
 
 const CTA = () => {
-  const toast = useToast();
-  const toastBody = () => {
-    toast({
-      title: 'Note!',
-      description: 'This will be available on the launch date.',
-      status: 'info',
-      position: 'top-right',
-      variant: 'left-accent',
-      isClosable: true,
-    });
-  };
+  const displayToastBody = useDisplayInfoToast();
   return (
     <Box py={{ base: 20, lg: 14 }} mt={{ base: 4, lg: 35 }} bg="brand.lemon">
       <Wrapper display="flex" flexDirection={{ base: 'column', lg: 'row' }} alignItems="center" width="100%">
@@ -73,7 +64,7 @@ const CTA = () => {
                     }}
                     padding="0"
                     mb={{ base: 3, lg: 0 }}
-                    onClick={toastBody}
+                    onClick={displayToastBody}
                   >
                     <Image src={button.image} alt={button.alt} />
                   </AppButton>

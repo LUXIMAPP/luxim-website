@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import {
-  Box, Input, Text, useToast,
+  Box, Input, Text,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -11,22 +11,12 @@ import Wrapper from '../../components/Wrapper';
 import appleStore from '../../public/images&svgs/appStore.svg';
 import googlePlay from '../../public/images&svgs/googlePlay.svg';
 import useJoinWaitList from './useJoinWaitList';
+import { useDisplayInfoToast } from '../faqPage/FAQ';
 
 const Hero = () => {
   const [userEmail, setUserEmail] = useState('');
   const { onClick: joinWaitlist, loader } = useJoinWaitList(setUserEmail);
-  const toast = useToast();
-  const toastBody = () => {
-    toast({
-      title: 'Note!',
-      description: 'This will be available on the launch date.',
-      status: 'info',
-      position: 'top-right',
-      variant: 'left-accent',
-      isClosable: true,
-    });
-  };
-
+  const displayToastBody = useDisplayInfoToast();
   return (
     <Wrapper showRightPadding={{ base: 6, md: 32, lg: 0 }}>
       <Box
@@ -128,7 +118,7 @@ const Hero = () => {
                     }}
                     padding="0"
                     mb={{ base: 3, lg: 0 }}
-                    onClick={toastBody}
+                    onClick={displayToastBody}
                   >
                     <Image src={button.image} alt={button.alt} />
                   </AppButton>
