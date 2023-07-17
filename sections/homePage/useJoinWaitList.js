@@ -16,7 +16,7 @@ const useJoinWaitList = (setUserEmail) => {
       .then((response) => {
         setLoader(false);
         toast({
-          title: 'Congratulations!',
+          title: 'Congratulations',
           description: response?.data?.message,
           position: 'top-right',
           variant: 'left-accent',
@@ -28,7 +28,7 @@ const useJoinWaitList = (setUserEmail) => {
       .catch((error) => {
         setLoader(false);
         toast({
-          title: 'Error!',
+          title: 'Error',
           description: error?.response?.data?.message,
           position: 'top-right',
           variant: 'left-accent',

@@ -46,9 +46,9 @@ const Footer = () => {
             </Text>
           </Box>
           <Box fontSize={{ base: '14px', lg: '16px' }}>
-            <Text fontWeight="600" mb={4}>
+            {/* <Text fontWeight="600" mb={4}>
               Legal
-            </Text>
+            </Text> */}
             <UnorderedList listStyleType="none" m={0} spacing={4}>
               {[
                 { title: 'Terms and Conditions', link: '/terms-and-conditions' },
@@ -72,12 +72,12 @@ const Footer = () => {
             </UnorderedList>
           </Box>
           <Box fontSize={{ base: '14px', lg: '16px' }}>
-            <Text fontWeight="600" mb={4}>
+            {/* <Text fontWeight="600" mb={4}>
               Others
-            </Text>
+            </Text> */}
             <UnorderedList listStyleType="none" m={0} spacing={4}>
               {[
-                { link: '/about', title: 'About Us' },
+                { link: '/about', title: 'About' },
                 { link: '/faqs', title: 'FAQs' },
                 { link: '/#contact', title: 'Contact' },
               ].map((item) => (
