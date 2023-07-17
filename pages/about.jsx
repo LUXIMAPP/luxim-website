@@ -29,7 +29,7 @@ export const CustomerGrowth = () => (
         />
       </a>
       <AppButton
-        title="Chat to our team"
+        title="Chat with us"
         color="white"
         theme="brand.primary1"
       />

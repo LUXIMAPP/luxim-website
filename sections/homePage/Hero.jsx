@@ -78,7 +78,7 @@ const Hero = () => {
                 <AppButton
                   zIndex="20"
                   theme="brand.primary1"
-                  title="Join Waitlist"
+                  title="Join the waitlist"
                   color="white"
                   onClick={(e) => joinWaitlist(e, userEmail)}
                   type="submit"
