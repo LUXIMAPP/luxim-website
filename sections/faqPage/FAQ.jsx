@@ -40,7 +40,7 @@ const FAQ = () => {
           Everything you need to know about the product and billing.
         </Text>
       </Box>
-      <Box mt={16}>
+      <Box maxWidth="1500px" margin="64px auto 0">
         <Accordion allowMultiple>
           <AccordionItem border="none" my={4}>
             {({ isExpanded }) => (
@@ -145,7 +145,6 @@ const FAQ = () => {
                   display="grid"
                   gridTemplateColumns={{ base: '15% 85%', lg: '10% 90%' }}
                 >
-                  <Box />
                   <Text>
                     Click the
                     {' '}

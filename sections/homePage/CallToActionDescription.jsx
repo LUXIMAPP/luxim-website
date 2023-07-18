@@ -9,28 +9,28 @@ const sellYourWaySection = [
   {
     number: '1',
     title: 'Sell it',
-    text: 'Listing your items on Luxim is a breeze! With just a few simple steps, take a photo of your items and simply upload it to your virtual closet in under 60 seconds- all conveniently done from your phone!',
+    text: 'Listing your items on Luxim is a breeze! Take 60 seconds to snap a few photos of your item and simply upload it to your virtual closet.',
   },
   {
     number: '2',
     title: 'Share It',
-    text: 'Spread the word and share your listing with your network, allowing shoppers to discover your incredible item! By actively sharing your lisings, you increase your chances of generating more sales and hearing the sweet sound of sale-Ching Ching!',
+    text: 'Share listings with your network for shoppers to discover your incredible fashion! Actively sharing your listings increases your chances of generating more sales so you’re closer to hearing the sweet sound of Cha-Ching!',
   },
   {
     number: '3',
     title: 'Earn Cash',
-    text: 'We provide you a hassle-free shipping process, from pick up to delivery. Once the item is delivered and verified, you can enjoy the joy of money in your pocket!',
+    text: 'Enjoy a hassle-free shipping process, from pick up to delivery. Once your sold item is delivered and verified, you can enjoy the cash in your wallet!',
   },
 ];
 
-const CTADescription = () => (
+const CallToActionDescription = () => (
   <Box
     bgSize="cover"
     bgPosition="center"
     pb={{ base: 16, md: 20 }}
     py={{ base: 16, md: 20 }}
   >
-    <Wrapper display="flex">
+    <Wrapper display="flex" data-aos="fade-left">
       <Box
         bg="#E5F5E9"
         bgImage={`url(${CTAbackground.src})`}
@@ -65,4 +65,4 @@ const CTADescription = () => (
   </Box>
 );
 
-export default CTADescription;
+export default CallToActionDescription;

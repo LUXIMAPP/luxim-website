@@ -29,7 +29,7 @@ const useJoinWaitList = (setUserEmail) => {
         setLoader(false);
         toast({
           title: 'Error',
-          description: error?.response?.data?.message,
+          description: error?.response?.data?.message ?? error?.message,
           position: 'top-right',
           variant: 'left-accent',
           status: 'error',

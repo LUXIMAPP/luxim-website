@@ -5,13 +5,14 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import CountDown from '../sections/homePage/CountDown';
 import About from '../sections/homePage/About';
-import CTADescription from '../sections/homePage/CTADescription';
 import AppShell from '../components/AppShell';
 import Hero from '../sections/homePage/Hero';
 import NavigationGuide from '../sections/homePage/NavigationGuide';
-import CTA from '../sections/homePage/CTA';
 // import ScanCode from '../sections/homePage/ScanCode';
 import { calculateTimeLeft } from '../customHooks/useCountdown';
+import Footer from '../components/Footer';
+import CallToActionSection from '../sections/homePage/CallToActionSection';
+import CallToActionDescription from '../sections/homePage/CallToActionDescription';
 
 const Home = () => {
   const router = useRouter();
@@ -74,8 +75,8 @@ const Home = () => {
           {remainingTime > 0 ? <CountDown /> : null}
           <Box display={{ base: 'flex', md: 'block' }} flexDirection="column">
             <NavigationGuide />
-            <CTADescription />
-            <CTA />
+            <CallToActionDescription />
+            <CallToActionSection />
             <About />
           </Box>
         </Box>
@@ -84,6 +85,8 @@ const Home = () => {
           fontSize={{ base: '26px', lg: '30px' }}
           textAlign="center"
           fontWeight="600"
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           Join the
           {' '}
@@ -98,6 +101,7 @@ const Home = () => {
         </Text>
         {/* <ScanCode /> */}
       </AppShell>
+      <Footer isFloatingCardExist={false} />
     </>
   );
 };

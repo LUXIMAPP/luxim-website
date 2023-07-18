@@ -10,20 +10,20 @@ const NavigationGuide = () => {
   const items = [
     {
       title: 'Zero Capital Required',
-      text: 'Join our Luxim community today! Simply go to your closet, snap a picture of an item, list and start making money! It’s that simple!',
+      text: 'It\'s free to list on Luxim! Simply go to your closet, snap a picture of an item, list it, and start making money!',
     },
     {
       title: 'Be your own boss',
-      text: 'Set your own hours, work from home or anywhere! The choice is yours!',
+      text: 'The choice is yours to set your own hours, work from home or from anywhere!',
     },
     {
       title: 'Seamless Logistics',
-      text: 'We take the worry out of your logistic needs. As a valued Luxim member, we come to your doorstep, pick up and deliver items to your clients.',
+      text: 'We take the worry out of your logistic needs! As a member of our community, we provide doorstep pick up and deliver sold items to your clients.',
     },
   ];
   return (
     <Box bg="#F8F8F8" py={20}>
-      <Wrapper>
+      <Wrapper data-aos="fade-right">
         <Box
           display="flex"
           flexDirection={{ base: 'column', lg: 'row' }}

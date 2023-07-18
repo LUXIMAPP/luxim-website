@@ -10,11 +10,11 @@ import closetImage from '../../public/images&svgs/homePage/CTA/CTaclosetImage.pn
 import Wrapper from '../../components/Wrapper';
 import { useDisplayInfoToast } from '../faqPage/FAQ';
 
-const CTA = () => {
+const CallToActionSection = () => {
   const displayToastBody = useDisplayInfoToast();
   return (
     <Box py={{ base: 20, lg: 14 }} mt={{ base: 4, lg: 35 }} bg="brand.lemon">
-      <Wrapper display="flex" flexDirection={{ base: 'column', lg: 'row' }} alignItems="center" width="100%">
+      <Wrapper display="flex" flexDirection={{ base: 'column', lg: 'row' }} alignItems="center" width="100%" data-aos="fade-right">
         <Box width={{ base: 'full', lg: '100%' }} margin="0 auto" textAlign={{ base: 'start', md: 'center', lg: 'start' }}>
           <Box mb={9}>
             <Text
@@ -81,4 +81,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default CallToActionSection;
