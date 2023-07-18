@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import Wrapper from './Wrapper';
 
-const FooterClosure = ({ children, ...rest }) => (
+const FooterCard = ({ children, ...rest }) => (
   <Wrapper display={{ base: 'block', lg: 'flex' }} padding={{ base: 3, lg: 6 }} justifyContent="center" mb={{ base: 16, lg: -131 }}>
     <Box
       bg="brand.lightLemon"
@@ -17,4 +17,4 @@ const FooterClosure = ({ children, ...rest }) => (
   </Wrapper>
 );
 
-export default FooterClosure;
+export default FooterCard;

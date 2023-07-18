@@ -3,12 +3,14 @@ import Head from 'next/head';
 import AppShell from '../components/AppShell';
 import AboutStat from '../sections/aboutPage/AboutStat';
 import letter from '../sections/aboutPage/aboutLuximLetter';
-import FooterClosure from '../components/FooterClosure';
 import AppButton from '../components/AppButton';
 import PageHeader from '../components/PageHeader';
+import Wrapper from '../components/Wrapper';
+import Footer from '../components/Footer';
+import FooterCard from '../components/FooterCard';
 
 export const CustomerGrowth = () => (
-  <FooterClosure textAlign="center">
+  <FooterCard textAlign="center">
     <Text fontSize="30px" lineHeight="38px" fontWeight="600" mb={4} as="h4">
       Join over 4,000+ customers already growing with Luxim.
     </Text>
@@ -34,7 +36,7 @@ export const CustomerGrowth = () => (
         theme="brand.primary1"
       />
     </Box>
-  </FooterClosure>
+  </FooterCard>
 );
 
 const About = () => (
@@ -65,9 +67,9 @@ const About = () => (
       />
     </Head>
     <AppShell>
-      <PageHeader title="About us" subTitle="What you need to know about Luxim" />
+      <PageHeader subTitle="What you need to know about Luxim" />
       <AboutStat />
-      <Box
+      <Wrapper
         width={{ base: '100%', lg: '50vw' }}
         px={{ base: 6, md: 36, lg: 0 }}
         marginY={{ base: 16, md: 24 }}
@@ -83,9 +85,10 @@ const About = () => (
         ))}
         <Text>Fumnanya and Mary,</Text>
         <Text> Co-Founders of Luxim.</Text>
-      </Box>
+      </Wrapper>
       <CustomerGrowth />
     </AppShell>
+    <Footer isFloatingCardExist />
   </>
 );
 

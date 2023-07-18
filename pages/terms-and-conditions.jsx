@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import AppShell from '../components/AppShell';
 import TermsAndCondition from '../sections/termsAndCondition/TermsAndCondition';
+import Footer from '../components/Footer';
 
 const TermsAndConditionMain = () => (
   <>
@@ -41,6 +42,7 @@ const TermsAndConditionMain = () => (
     <AppShell>
       <TermsAndCondition />
     </AppShell>
+    <Footer isFloatingCardExist />
   </>
 );
 

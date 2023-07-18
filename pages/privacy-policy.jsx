@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import AppShell from '../components/AppShell';
 import PrivacyPolicy from '../sections/privacyPolicy/PrivacyPolicy';
+import Footer from '../components/Footer';
 
 const PrivacyPolicyMain = () => (
   <>
@@ -41,6 +42,7 @@ const PrivacyPolicyMain = () => (
     <AppShell>
       <PrivacyPolicy />
     </AppShell>
+    <Footer isFloatingCardExist />
   </>
 );
 
