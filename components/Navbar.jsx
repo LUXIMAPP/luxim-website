@@ -42,7 +42,6 @@ const Navbar = () => {
               {[
                 { title: 'Home', link: '/' },
                 { title: 'About', link: '/about' },
-                // { title: 'Blog', link: '/#blog' },
               ].map((list) => (
                 <ListItem key={list.title} textTransform="uppercase">
                   <Link href={`${list.link}`}>
@@ -65,7 +64,7 @@ const Navbar = () => {
             {/*  remove padding when watch demo is added */}
             <Box display="flex" gap={10} alignItems="center">
               {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index !== 2 ? (
-                <ListItem key={list} display={{ base: 'none', lg: 'flex' }} textTransform="uppercase">
+                <ListItem key={list.title} display={{ base: 'none', lg: 'flex' }} textTransform="uppercase">
                   <Link href={`${list.link}`}>
                     <a
                       className={

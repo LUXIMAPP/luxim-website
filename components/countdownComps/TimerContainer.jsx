@@ -76,10 +76,10 @@ const TimerContainer = ({
         justifyContent="center"
       >
         {[
-          { num: days, unit: 'Days', flip: daysFlip },
-          { num: hours, unit: 'Hours', flip: hoursFlip },
-          { num: minutes, unit: 'Minutes', flip: minutesFlip },
-          { num: seconds, unit: 'Seconds', flip: secondsFlip },
+          { num: days, unit: 'Days', flip: daysFlip.toString() },
+          { num: hours, unit: 'Hours', flip: hoursFlip.toString() },
+          { num: minutes, unit: 'Minutes', flip: minutesFlip.toString() },
+          { num: seconds, unit: 'Seconds', flip: secondsFlip.toString() },
         ].map((item, index) => (
           <Box
             key={item.unit}

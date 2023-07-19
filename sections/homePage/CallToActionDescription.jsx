@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
+import React from 'react';
 import Wrapper from '../../components/Wrapper';
 import CTAbackground from '../../public/images&svgs/homePage/CTADetails/CTAbackground.svg';
 import MobilePhoto from '../../public/images&svgs/homePage/CTADetails/CTAMobilePhoto.png';
@@ -57,7 +58,9 @@ const CallToActionDescription = () => (
             Sell Your Way
           </Text>
           {sellYourWaySection.map((item) => (
-            <NumberedListBox item={item} />
+            <React.Fragment key={item.number}>
+              <NumberedListBox item={item} />
+            </React.Fragment>
           ))}
         </Box>
       </Box>
