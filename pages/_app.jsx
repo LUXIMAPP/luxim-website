@@ -31,6 +31,7 @@ const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
+      // disable: 'phone tablet mobile',
       // once: false,
     });
   }, []);

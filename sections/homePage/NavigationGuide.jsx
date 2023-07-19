@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
+import React from 'react';
 import Wrapper from '../../components/Wrapper';
 import AppButton from '../../components/AppButton';
 import correctIcon from '../../public/images&svgs/homePage/navigationGuide/correctIcon.svg';
@@ -53,7 +54,9 @@ const NavigationGuide = () => {
               </Text>
               <Box>
                 {items.map((item) => (
-                  <NumberedListBox item={item} icon={correctIcon} altText="correct icon bullet poin" />
+                  <React.Fragment key={item.title}>
+                    <NumberedListBox item={item} icon={correctIcon} altText="correct icon bullet poin" />
+                  </React.Fragment>
                 ))}
               </Box>
             </>

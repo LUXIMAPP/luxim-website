@@ -81,7 +81,7 @@ const Footer = ({ isFloatingCardExist }) => {
                 { link: '/faqs', title: 'FAQs' },
                 { link: '/#contact', title: 'Contact' },
               ].map((item) => (
-                <ListItem _hover={{ color: 'brand.primary2' }} key={item.link}>
+                <ListItem _hover={{ color: 'brand.primary2' }} key={item.title}>
                   <a href={item.link}>{item.title}</a>
                 </ListItem>
               ))}

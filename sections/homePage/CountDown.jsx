@@ -13,7 +13,7 @@ const CountDown = () => (
       <Box
         borderBottom="1px solid black"
       />
-      <Box mt={{ base: '-14.5vw', md: '-7.5vw', lg: '-4vw' }}>
+      <Box mt={{ base: '-10.5vw', md: '-7.5vw', lg: '-4vw' }}>
         <CountDownProper />
       </Box>
     </Box>
