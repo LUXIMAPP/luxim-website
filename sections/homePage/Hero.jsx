@@ -106,7 +106,7 @@ const Hero = () => {
                   alt: 'download for google play store button',
                 },
               ].map((button) => (
-                <Box id={button.id}>
+                <Box key={button.id}>
                   <AppButton
                     width="full"
                     bg="transparent"

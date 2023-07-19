@@ -84,9 +84,9 @@ const PrivacyPolicy = () => (
                         {child.text}
                       </Text>
                       <UnorderedList>
-                        {child.bulletPoints.map((point, pointIndex) => (
+                        {child.bulletPoints.map((point) => (
                           <ListItem
-                            key={pointIndex}
+                            key={point}
                             my={4}
                             dangerouslySetInnerHTML={{ __html: point }}
                           />
