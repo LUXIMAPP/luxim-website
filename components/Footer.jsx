@@ -13,12 +13,12 @@ import linkedin from '../public/images&svgs/footer/LinkedIn logo.svg';
 // import youtube from '../public/images&svgs/footer/YouTube logo.svg';
 import Wrapper from './Wrapper';
 
-const Footer = () => {
+const Footer = ({ isFloatingCardExist }) => {
   const date = new Date();
   const currentYear = date.getFullYear();
   const router = useRouter();
   return (
-    <Box bg="brand.primary1" pb={{ base: 10, lg: 16 }} pt={{ base: 16, lg: 40 }} id="contact">
+    <Box bg="brand.primary1" pb={{ base: 10, lg: 16 }} pt={isFloatingCardExist ? { base: 16, lg: 40 } : { base: 10, lg: 16 }} id="contact">
       <Wrapper>
         <Box
           display="grid"
@@ -46,9 +46,9 @@ const Footer = () => {
             </Text>
           </Box>
           <Box fontSize={{ base: '14px', lg: '16px' }}>
-            <Text fontWeight="600" mb={4}>
+            {/* <Text fontWeight="600" mb={4}>
               Legal
-            </Text>
+            </Text> */}
             <UnorderedList listStyleType="none" m={0} spacing={4}>
               {[
                 { title: 'Terms and Conditions', link: '/terms-and-conditions' },
@@ -72,12 +72,12 @@ const Footer = () => {
             </UnorderedList>
           </Box>
           <Box fontSize={{ base: '14px', lg: '16px' }}>
-            <Text fontWeight="600" mb={4}>
+            {/* <Text fontWeight="600" mb={4}>
               Others
-            </Text>
+            </Text> */}
             <UnorderedList listStyleType="none" m={0} spacing={4}>
               {[
-                { link: '/about', title: 'About Us' },
+                { link: '/about', title: 'About' },
                 { link: '/faqs', title: 'FAQs' },
                 { link: '/#contact', title: 'Contact' },
               ].map((item) => (
@@ -100,7 +100,7 @@ const Footer = () => {
               color="brand.lemon"
               fontSize={{ base: '14px', lg: '16px' }}
             >
-              {`©${currentYear} Luxim Inc. All rights reserved`}
+              {`©${currentYear} Luxim App Ltd. All rights reserved`}
 
             </Text>
             <Box display="flex" gap={4}>

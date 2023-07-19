@@ -21,7 +21,7 @@ const HamburgerMenu = () => {
           <UnorderedList id="menu" pt={2} m={0}>
             {[
               { title: 'Home', link: '/' },
-              { title: 'About Us', link: '/about' },
+              { title: 'About', link: '/about' },
               // { title: 'Blog', link: '/#blog' },
               { title: 'FAQs', link: '/faqs' },
               { title: 'Contact', link: '/#contact' },

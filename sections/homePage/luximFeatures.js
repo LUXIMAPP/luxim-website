@@ -4,17 +4,17 @@ const features = [
   { number: '1', title: 'More than just fashion...' },
   {
     image: line,
-    text: 'Sustainability is a core value at Luxim, and we are committed to promoting eco-friendly practices through our platform. We aim to reduce clothing waste and minimize the environmental impact of the fashion industry.',
+    text: 'Sustainability is one of our  core values. We are committed to promoting eco-friendly practices through our platform. Our goals is to reduce clothing waste and minimize the environmental impact of the fashion industry.',
   },
   { number: '2', title: 'Creating economic opportunities' },
   {
     image: line,
-    text: 'Through Luxim, we can preserve our cultural heritage, create economic opportunities, and protect the planet.',
+    text: 'We are preserving our cultural heritage, creating economic opportunities, and protecting the planet.',
   },
   { number: '3', title: 'Find your style' },
   {
     image: '',
-    text: 'Start shopping your favorite custom styles at prices up to 70% off or curate your style by following the closets of your favorite influencers or people in your circle.',
+    text: 'Start shopping your favourite custom styles at prices up to 70% off and  curate your style.',
   },
 ];
 

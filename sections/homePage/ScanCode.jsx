@@ -1,11 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Box, Text } from '@chakra-ui/react';
 import QRCode from 'react-qr-code';
-import FooterClosure from '../../components/FooterClosure';
 import AppButton from '../../components/AppButton';
+import FooterCard from '../../components/FooterCard';
 
 const ScanCode = () => (
-  <FooterClosure
+  <FooterCard
     display={{ base: 'block', lg: 'flex' }}
     justifyContent="space-between"
     alignItems="center"
@@ -36,7 +36,7 @@ const ScanCode = () => (
           />
         </a>
         <AppButton
-          title="Chat to our team"
+          title="Chat with us"
           color="white"
           theme="brand.primary1"
         />
@@ -66,7 +66,7 @@ const ScanCode = () => (
         </Text>
       </Box>
     </Box>
-  </FooterClosure>
+  </FooterCard>
 );
 
 export default ScanCode;

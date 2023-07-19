@@ -41,7 +41,7 @@ const Navbar = () => {
             <Box display={{ base: 'none', lg: 'flex' }} gap={10}>
               {[
                 { title: 'Home', link: '/' },
-                { title: 'About Us', link: '/about' },
+                { title: 'About', link: '/about' },
                 // { title: 'Blog', link: '/#blog' },
               ].map((list) => (
                 <ListItem key={list.title} textTransform="uppercase">

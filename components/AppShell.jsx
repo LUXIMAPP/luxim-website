@@ -3,7 +3,7 @@ import { ChevronUpIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { Box } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 const AppShell = ({ children }) => {
   const [reachedFooter, setReachedFooter] = useState(false);
@@ -64,7 +64,7 @@ const AppShell = ({ children }) => {
           color={reachedFooter ? 'white' : 'black'}
         />
       </Box>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

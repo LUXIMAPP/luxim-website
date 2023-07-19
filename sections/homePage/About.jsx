@@ -21,7 +21,7 @@ export const NumberComp = ({ number }) => (
 );
 
 const About = () => (
-  <Box mt={{ sm: 0, lg: 50 }} pt={10} pb={{ sm: 0, lg: 32 }}>
+  <Box mt={{ sm: 0, lg: 50 }} pt={10} pb={{ sm: 0, lg: 32 }} data-aos="fade-left">
     <Wrapper>
       <Box width={{ sm: 'full', lg: '50%' }} textAlign="start">
         <Text
@@ -60,7 +60,7 @@ const About = () => (
         >
           Luxim- Social and secure experience to shop for traditional fashion.
           We’re a community of traditional fashion enthusiasts, where we
-          connect, inspire, and create opportunities to earn income, while
+          connect, inspire and create opportunities to earn income, while
           actively reducing clothing waste.
         </Text>
       </Box>

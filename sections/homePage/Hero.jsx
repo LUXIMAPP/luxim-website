@@ -1,7 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import {
-  Box, Input, Text, useToast,
-} from '@chakra-ui/react';
+import { Box, Input, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useState } from 'react';
 import heroImg from '../../public/images&svgs/homePage/hero/hero.png';
@@ -11,22 +9,12 @@ import Wrapper from '../../components/Wrapper';
 import appleStore from '../../public/images&svgs/appStore.svg';
 import googlePlay from '../../public/images&svgs/googlePlay.svg';
 import useJoinWaitList from './useJoinWaitList';
+import { useDisplayInfoToast } from '../faqPage/FAQ';
 
 const Hero = () => {
   const [userEmail, setUserEmail] = useState('');
   const { onClick: joinWaitlist, loader } = useJoinWaitList(setUserEmail);
-  const toast = useToast();
-  const toastBody = () => {
-    toast({
-      title: 'Note!',
-      description: 'This will be available on the launch date.',
-      status: 'info',
-      position: 'top-right',
-      variant: 'left-accent',
-      isClosable: true,
-    });
-  };
-
+  const displayToastBody = useDisplayInfoToast();
   return (
     <Wrapper showRightPadding={{ base: 6, md: 32, lg: 0 }}>
       <Box
@@ -38,6 +26,7 @@ const Hero = () => {
         mt={{ base: 10, lg: 16 }}
         mb={{ base: 8, md: 12 }}
         pb={{ base: 10, lg: 32 }}
+        data-aos="fade-left"
       >
         <Box width={{ base: '100%', lg: '50%' }}>
           <Box width={{ base: 'full', lg: '100%' }} textAlign="start">
@@ -60,15 +49,15 @@ const Hero = () => {
             </Text>
             <Text
               fontWeight={{ base: '500', lg: '400' }}
-              color="brand.grey"
+              // color="brand.grey"
               lineHeight="28px"
               fontSize={{ base: '15px', lg: '18px' }}
               mb={8}
             >
-              A virtual marketplace for preloved traditional fashion, vintage
+              The virtual marketplace for preloved traditional fashion, vintage
               pieces, latest trends, and much more. Whatever your style, buy and
-              sell unique pieces on Luxim, the ultimate social marketplace app
-              that connects fashion enthusiasts for unique fashion finds.
+              sell unique pieces on Luxim, and stay connected with a community
+              of trendsetters, local designers and fashion icons.
             </Text>
             <form onSubmit={(e) => joinWaitlist((e, userEmail))}>
               <Box
@@ -88,7 +77,7 @@ const Hero = () => {
                 <AppButton
                   zIndex="20"
                   theme="brand.primary1"
-                  title="Join Waitlist"
+                  title="Join the waitlist"
                   color="white"
                   onClick={(e) => joinWaitlist(e, userEmail)}
                   type="submit"
@@ -128,7 +117,7 @@ const Hero = () => {
                     }}
                     padding="0"
                     mb={{ base: 3, lg: 0 }}
-                    onClick={toastBody}
+                    onClick={displayToastBody}
                   >
                     <Image src={button.image} alt={button.alt} />
                   </AppButton>
@@ -140,7 +129,7 @@ const Hero = () => {
         <Box width="45%" zIndex={1} display={{ base: 'none', lg: 'block' }}>
           <Image src={heroImg} alt="hero section image" />
         </Box>
-        <Box mt={10} display={{ base: 'block', lg: 'none' }}>
+        <Box mt={10} display={{ base: 'block', lg: 'none' }} data-aos="fade-left">
           <Image src={heroImgMobile} alt="hero section image" />
         </Box>
       </Box>

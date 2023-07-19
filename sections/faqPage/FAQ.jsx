@@ -13,11 +13,11 @@ import plusIcon from '../../public/images&svgs/faq/plus-circle.svg';
 import minusIcon from '../../public/images&svgs/faq/minus-circle.svg';
 import question from './question';
 
-const FAQ = () => {
+export const useDisplayInfoToast = () => {
   const toast = useToast();
-  const toastBody = () => {
+  const displayToastBody = () => {
     toast({
-      title: 'Note!',
+      title: 'Note',
       description: 'This will be available on the launch date.',
       status: 'info',
       position: 'top-right',
@@ -25,7 +25,11 @@ const FAQ = () => {
       isClosable: true,
     });
   };
+  return displayToastBody;
+};
 
+const FAQ = () => {
+  const displayToastBody = useDisplayInfoToast();
   return (
     <Box maxW={{ base: '90vw', md: '100%', lg: '53vw' }} px={{ base: 0, md: 32, lg: 0 }} margin="0 auto" py={24} mb={{ base: 0, lg: 24 }}>
       <Box textAlign="center">
@@ -36,7 +40,7 @@ const FAQ = () => {
           Everything you need to know about the product and billing.
         </Text>
       </Box>
-      <Box mt={16}>
+      <Box maxWidth="1500px" margin="64px auto 0">
         <Accordion allowMultiple>
           <AccordionItem border="none" my={4}>
             {({ isExpanded }) => (
@@ -69,7 +73,7 @@ const FAQ = () => {
                     {' '}
                     <Text
                       as="span"
-                      onClick={toastBody}
+                      onClick={displayToastBody}
                       cursor="pointer"
                       fontWeight="800"
                     >
@@ -141,13 +145,12 @@ const FAQ = () => {
                   display="grid"
                   gridTemplateColumns={{ base: '15% 85%', lg: '10% 90%' }}
                 >
-                  <Box />
                   <Text>
                     Click the
                     {' '}
                     <Text
                       as="span"
-                      onClick={toastBody}
+                      onClick={displayToastBody}
                       cursor="pointer"
                       fontWeight="800"
                     >
@@ -163,6 +166,7 @@ const FAQ = () => {
         </Accordion>
       </Box>
     </Box>
+
   );
 };
 

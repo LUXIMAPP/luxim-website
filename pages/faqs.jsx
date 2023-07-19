@@ -3,6 +3,7 @@ import AppShell from '../components/AppShell';
 import FAQ from '../sections/faqPage/FAQ';
 import { CustomerGrowth } from './about';
 import PageHeader from '../components/PageHeader';
+import Footer from '../components/Footer';
 
 const Faqs = () => (
   <>
@@ -49,6 +50,7 @@ const Faqs = () => (
       <FAQ />
       <CustomerGrowth />
     </AppShell>
+    <Footer isFloatingCardExist />
   </>
 );
 
