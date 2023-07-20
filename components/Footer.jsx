@@ -10,7 +10,6 @@ import facebook from '../public/images&svgs/footer/Facebook logo.svg';
 import twitter from '../public/images&svgs/footer/Twitter logo.svg';
 import instagram from '../public/images&svgs/footer/Instagram logo.svg';
 import linkedin from '../public/images&svgs/footer/LinkedIn logo.svg';
-// import youtube from '../public/images&svgs/footer/YouTube logo.svg';
 import Wrapper from './Wrapper';
 
 const Footer = ({ isFloatingCardExist }) => {
@@ -46,14 +45,10 @@ const Footer = ({ isFloatingCardExist }) => {
             </Text>
           </Box>
           <Box fontSize={{ base: '14px', lg: '16px' }}>
-            {/* <Text fontWeight="600" mb={4}>
-              Legal
-            </Text> */}
             <UnorderedList listStyleType="none" m={0} spacing={4}>
               {[
                 { title: 'Terms and Conditions', link: '/terms-and-conditions' },
                 { title: 'Privacy Policy', link: '/privacy-policy' },
-                // { title: 'Return Policies', link: '#' },
               ].map((item) => (
                 <ListItem key={item.title}>
                   <Link href={`${item.link}`}>
@@ -72,9 +67,6 @@ const Footer = ({ isFloatingCardExist }) => {
             </UnorderedList>
           </Box>
           <Box fontSize={{ base: '14px', lg: '16px' }}>
-            {/* <Text fontWeight="600" mb={4}>
-              Others
-            </Text> */}
             <UnorderedList listStyleType="none" m={0} spacing={4}>
               {[
                 { link: '/about', title: 'About' },
@@ -82,7 +74,17 @@ const Footer = ({ isFloatingCardExist }) => {
                 { link: '/#contact', title: 'Contact' },
               ].map((item) => (
                 <ListItem _hover={{ color: 'brand.primary2' }} key={item.title}>
-                  <a href={item.link}>{item.title}</a>
+                  <Link href={`${item.link}`}>
+                    <a
+                      className={
+                        `${router.asPath === item.link
+                          ? 'text-[#D3DB22]'
+                          : ''} hover:text-[#D3DB22]`
+          }
+                    >
+                      {item.title}
+                    </a>
+                  </Link>
                 </ListItem>
               ))}
             </UnorderedList>
@@ -100,7 +102,7 @@ const Footer = ({ isFloatingCardExist }) => {
               color="brand.lemon"
               fontSize={{ base: '14px', lg: '16px' }}
             >
-              {`©${currentYear} Luxim App Ltd. All rights reserved`}
+              {`©${currentYear} Luxim App Limited. All rights reserved`}
 
             </Text>
             <Box display="flex" gap={4}>

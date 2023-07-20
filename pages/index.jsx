@@ -80,25 +80,27 @@ const Home = () => {
             <About />
           </Box>
         </Box>
-        <Text
-          mb={{ base: 10, lg: 20 }}
-          fontSize={{ base: '26px', lg: '30px' }}
-          textAlign="center"
-          fontWeight="600"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          Join the
-          {' '}
-          <Text as="span" color="brand.secondary">
-            Luxim
+        <Box overflowX="hidden">
+          <Text
+            mb={{ base: 10, lg: 20 }}
+            fontSize={{ base: '26px', lg: '30px' }}
+            textAlign="center"
+            fontWeight="600"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Join the
             {' '}
+            <Text as="span" color="brand.secondary">
+              Luxim
+              {' '}
+            </Text>
+            community that’s changing lives
+            {' '}
+            <br />
+            Inspiration lives here!
           </Text>
-          community that’s changing lives
-          {' '}
-          <br />
-          Inspiration lives here!
-        </Text>
+        </Box>
         {/* <ScanCode /> */}
       </AppShell>
       <Footer isFloatingCardExist={false} />

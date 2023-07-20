@@ -20,12 +20,12 @@
 html {
     scroll-behavior: smooth;
     width: 100vw;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
   body{
     width: 100vw;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
 #menuToggle {
