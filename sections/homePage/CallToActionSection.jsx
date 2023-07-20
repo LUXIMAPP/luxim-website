@@ -5,7 +5,7 @@ import appleStore from '../../public/images&svgs/appStore.svg';
 import googlePlay from '../../public/images&svgs/googlePlay.svg';
 // import mobile from '../../public/homePage/CTA/mockup-min.png';
 // import footerImgMobile from '../../public/homePage/CTA/footerImgMobile.png';
-import closetImage from '../../public/images&svgs/homePage/CTA/CTAclosetImage.png';
+import closetImage from '../../public/images&svgs/homePage/CTA/closetImage.png';
 // import mobileImageSmall from '../../public/homePage/CTA/mobileImageSmall.png';
 import Wrapper from '../../components/Wrapper';
 import { useDisplayInfoToast } from '../faqPage/FAQ';
