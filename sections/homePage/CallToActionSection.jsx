@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import AppButton from '../../components/AppButton';
