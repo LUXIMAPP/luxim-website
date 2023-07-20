@@ -30,6 +30,7 @@ const CallToActionDescription = () => (
     bgPosition="center"
     pb={{ base: 16, md: 20 }}
     py={{ base: 16, md: 20 }}
+    overflowX="hidden"
   >
     <Wrapper display="flex" data-aos="fade-left">
       <Box

@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 
 const PageHeader = ({ title, subTitle, text }) => (
-  <Box bg="brand.primary1" color="white" textAlign="center" py={24} px={{ base: 4, md: 36, lg: 0 }}>
+  <Box bg="brand.primary1" color="white" textAlign="center" py={24} px={{ base: 4, md: 36, lg: 0 }} overflowX="hidden">
     <Box
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"

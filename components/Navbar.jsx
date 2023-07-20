@@ -2,16 +2,12 @@ import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// import { useState } from 'react';
 import logo from '../public/images&svgs/navbar/logo.svg';
-// import AppButton from './AppButton';
 import Wrapper from './Wrapper';
 import HamburgerMenu from './HamburgerMenu';
-// import Play from '../public/navbar/Play';
 
 const Navbar = () => {
   const router = useRouter();
-  // const [isHover, setIsHover] = useState(false);
 
   return (
     <Box

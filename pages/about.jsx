@@ -75,7 +75,7 @@ const About = () => (
         marginY={{ base: 16, md: 24 }}
         marginX="auto"
         fontSize={{ base: '16px', md: '18px' }}
-        lineHeight="28px"
+        // lineHeight="28px"
         mb={20}
       >
         {letter.map((paragraph) => (
