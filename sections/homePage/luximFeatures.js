@@ -4,7 +4,7 @@ const features = [
   { number: '1', title: 'More than just fashion...' },
   {
     image: line,
-    text: 'Sustainability is one of our  core values. We are committed to promoting eco-friendly practices through our platform. Our goals is to reduce clothing waste and minimize the environmental impact of the fashion industry.',
+    text: 'Sustainability is one of our  core values. We are committed to promoting eco-friendly practices through our platform. Our goal is to reduce clothing waste and minimize the environmental impact of the fashion industry.',
   },
   { number: '2', title: 'Creating economic opportunities' },
   {

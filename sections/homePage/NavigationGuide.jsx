@@ -11,7 +11,7 @@ const NavigationGuide = () => {
   const items = [
     {
       title: 'Zero Capital Required',
-      text: 'It\'s free to list on Luxim! Simply go to your closet, snap a picture of an item, list it, and start making money!',
+      text: "It's free to list on Luxim! Simply go to your closet, snap a picture of an item, list it, and start making money!",
     },
     {
       title: 'Be your own boss',
@@ -23,7 +23,7 @@ const NavigationGuide = () => {
     },
   ];
   return (
-    <Box bg="#F8F8F8" py={20}>
+    <Box bg="#F8F8F8" py={20} overflowX="hidden">
       <Wrapper data-aos="fade-right">
         <Box
           display="flex"
@@ -40,36 +40,57 @@ const NavigationGuide = () => {
                 </Box>
                 works
               </Text>
-              <Text
-              // color="brand.grey"
+              {/* <Text
+                // color="brand.grey"
                 fontSize={{ base: '14px', md: '16px' }}
                 mt={2}
                 mb={10}
                 lineHeight={{ base: '24px', md: '28px' }}
                 fontWeight="400"
               >
-                How to navigate buying, selling and shopping on Luxim Community of
-                traditional fashion enthusiasts can connect, inspire, and create
-                opportunities to earn income while reducing clothing waste.
-              </Text>
+                How to navigate buying, selling and shopping on Luxim Community
+                of traditional fashion enthusiasts can connect, inspire, and
+                create opportunities to earn income while reducing clothing
+                waste.
+              </Text> */}
               <Box>
                 {items.map((item) => (
                   <React.Fragment key={item.title}>
-                    <NumberedListBox item={item} icon={correctIcon} altText="correct icon bullet poin" />
+                    <NumberedListBox
+                      item={item}
+                      icon={correctIcon}
+                      altText="correct icon bullet poin"
+                    />
                   </React.Fragment>
                 ))}
               </Box>
             </>
-            <Box display={{ base: 'none', lg: 'flex' }} justifyContent={{ base: 'center', lg: 'start' }}>
-              <AppButton title="Watch more" theme="brand.primary1" color="white" mt={10} />
+            <Box
+              display={{ base: 'none', lg: 'flex' }}
+              justifyContent={{ base: 'center', lg: 'start' }}
+            >
+              <AppButton
+                title="Watch more"
+                theme="brand.primary1"
+                color="white"
+                mt={10}
+              />
             </Box>
           </Box>
           <Box width={{ base: '100%', lg: '55%' }} mt={{ base: 10, lg: 0 }}>
             <Image src={videoPlaceholder} alt="video demo place holder" />
           </Box>
         </Box>
-        <Box display={{ base: 'flex', lg: 'none' }} justifyContent={{ base: 'center', lg: 'start' }}>
-          <AppButton title="Watch more" theme="brand.primary1" color="white" mt={10} />
+        <Box
+          display={{ base: 'flex', lg: 'none' }}
+          justifyContent={{ base: 'center', lg: 'start' }}
+        >
+          <AppButton
+            title="Watch more"
+            theme="brand.primary1"
+            color="white"
+            mt={10}
+          />
         </Box>
       </Wrapper>
     </Box>

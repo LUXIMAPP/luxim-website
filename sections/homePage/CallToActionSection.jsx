@@ -5,7 +5,7 @@ import appleStore from '../../public/images&svgs/appStore.svg';
 import googlePlay from '../../public/images&svgs/googlePlay.svg';
 // import mobile from '../../public/homePage/CTA/mockup-min.png';
 // import footerImgMobile from '../../public/homePage/CTA/footerImgMobile.png';
-import closetImage from '../../public/images&svgs/homePage/CTA/CTaclosetImage.png';
+import closetImage from '../../public/images&svgs/homePage/CTA/closetImage.png';
 // import mobileImageSmall from '../../public/homePage/CTA/mobileImageSmall.png';
 import Wrapper from '../../components/Wrapper';
 import { useDisplayInfoToast } from '../faqPage/FAQ';
@@ -13,7 +13,7 @@ import { useDisplayInfoToast } from '../faqPage/FAQ';
 const CallToActionSection = () => {
   const displayToastBody = useDisplayInfoToast();
   return (
-    <Box py={{ base: 20, lg: 14 }} mt={{ base: 4, lg: 35 }} bg="brand.lemon">
+    <Box pt={20} mt={{ base: 4, lg: 35 }} bg="brand.lemon" overflowX="hidden">
       <Wrapper display="flex" flexDirection={{ base: 'column', lg: 'row' }} alignItems="center" width="100%" data-aos="fade-right">
         <Box width={{ base: 'full', lg: '100%' }} margin="0 auto" textAlign={{ base: 'start', md: 'center', lg: 'start' }}>
           <Box mb={9}>
@@ -73,7 +73,7 @@ const CallToActionSection = () => {
             </Box>
           </Box>
         </Box>
-        <Box mt={{ base: 10, lg: 0 }} justifyContent="center" width="100%">
+        <Box mt={{ base: 10, lg: 0 }} justifyContent="center" width="70%">
           <Image src={closetImage} alt="mobile mockup call to action section image" />
         </Box>
       </Wrapper>

@@ -16,7 +16,7 @@ const Hero = () => {
   const { onClick: joinWaitlist, loader } = useJoinWaitList(setUserEmail);
   const displayToastBody = useDisplayInfoToast();
   return (
-    <Wrapper showRightPadding={{ base: 6, md: 32, lg: 0 }}>
+    <Wrapper showRightPadding={{ base: 6, md: 32, lg: 0 }} overflowX="hidden">
       <Box
         display="flex"
         flexDirection={{ base: 'column', lg: 'row' }}
@@ -26,6 +26,7 @@ const Hero = () => {
         mt={{ base: 10, lg: 16 }}
         mb={{ base: 8, md: 12 }}
         pb={{ base: 10, lg: 32 }}
+        mr={3}
         data-aos="fade-left"
       >
         <Box width={{ base: '100%', lg: '50%' }}>
