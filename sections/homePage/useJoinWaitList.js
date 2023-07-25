@@ -5,12 +5,13 @@ import { useState } from 'react';
 const useJoinWaitList = (setUserEmail) => {
   const toast = useToast();
   const [loader, setLoader] = useState(false);
+  const BASE_URL = process.env.NEXT_PUBLIC_LUXIM_PRODUCTION_BASEURL;
 
   const onClick = (e, email) => {
     e.preventDefault();
     setLoader(true);
     axios
-      .post('https://luxim-api.enyata.com/api/v1/user/waitlist', {
+      .post(`${BASE_URL}/user/waitlist`, {
         email,
       })
       .then((response) => {
