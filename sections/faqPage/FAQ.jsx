@@ -145,6 +145,8 @@ const FAQ = () => {
                   display="grid"
                   gridTemplateColumns={{ base: '15% 85%', lg: '10% 90%' }}
                 >
+                  <Box />
+
                   <Text>
                     Click the
                     {' '}
