@@ -71,11 +71,12 @@ const Footer = ({ isFloatingCardExist }) => {
               {[
                 { link: '/about', title: 'About' },
                 { link: '/faqs', title: 'FAQs' },
-                { link: '/#contact', title: 'Contact' },
+                { link: 'https://luximapp.freshdesk.com/support/home', title: 'Contact' },
               ].map((item) => (
                 <ListItem _hover={{ color: 'brand.primary2' }} key={item.title}>
                   <Link href={`${item.link}`}>
                     <a
+                      target={item?.title === 'Contact' ? '_blank' : '_self'}
                       className={
                         `${router.asPath === item.link
                           ? 'text-[#D3DB22]'
