@@ -14,7 +14,9 @@ export const CustomerGrowth = () => (
     <Text fontSize="30px" lineHeight="38px" fontWeight="600" mb={4} as="h4">
       Join over 4,000+ customers already growing with Luxim.
     </Text>
-    <Text mb={8} fontSize="18px">Still have questions?</Text>
+    <Text mb={8} fontSize="18px">
+      Still have questions?
+    </Text>
     <Box
       display="flex"
       gap={3}
@@ -30,11 +32,17 @@ export const CustomerGrowth = () => (
           title="Email us"
         />
       </a>
-      <AppButton
-        title="Chat with us"
-        color="white"
-        theme="brand.primary1"
-      />
+      <a
+        href="https://luximapp.freshdesk.com/support/home"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <AppButton
+          title="Chat with us"
+          color="white"
+          theme="brand.primary1"
+        />
+      </a>
     </Box>
   </FooterCard>
 );
@@ -42,7 +50,10 @@ export const CustomerGrowth = () => (
 const About = () => (
   <>
     <Head>
-      <meta name="description" content="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities." />
+      <meta
+        name="description"
+        content="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities."
+      />
       <meta name="title" property="og:title" content="About Luxim" />
       <meta name="type" property="og:type" content="website" />
       <meta
@@ -50,14 +61,20 @@ const About = () => (
         property="og:image"
         content="https://luxim-images.s3.us-east-2.amazonaws.com/mainLoginImg.webp"
       />
-      <meta property="og:description" content="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities." />
+      <meta
+        property="og:description"
+        content="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities."
+      />
       <meta name="author" content="Luxim" />
       <meta property="og:site_name" content="Luxim" />
 
       {/* Twitter tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="About Luxim" />
-      <meta name="twitter:description" content="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities." />
+      <meta
+        name="twitter:description"
+        content="A community-driven app, celebrating Nigeria's traditional fashion, promoting sustainability and economic opportunities."
+      />
       <meta name="twitter:site" content="@Luxim" />
       <meta name="twitter:creator" content="@Luxim" />
       <meta name="twitter:image:alt" content="Luxim" />

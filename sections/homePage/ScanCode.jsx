@@ -35,11 +35,17 @@ const ScanCode = () => (
             title="Email us"
           />
         </a>
-        <AppButton
-          title="Chat with us"
-          color="white"
-          theme="brand.primary1"
-        />
+        <a
+          href="https://luximapp.freshdesk.com/support/home"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <AppButton
+            title="Chat with us"
+            color="white"
+            theme="brand.primary1"
+          />
+        </a>
       </Box>
     </Box>
     <Box mt={{ base: 6, lg: 0 }}>
