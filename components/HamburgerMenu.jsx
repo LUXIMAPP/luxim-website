@@ -24,11 +24,12 @@ const HamburgerMenu = () => {
               { title: 'About', link: '/about' },
               // { title: 'Blog', link: '/#blog' },
               { title: 'FAQs', link: '/faqs' },
-              { title: 'Contact', link: '/#contact' },
+              { title: 'Contact', link: 'https://luximapp.freshdesk.com/support/home' },
             ].map((list) => (
               <ListItem key={list.title} textTransform="uppercase">
                 <Link href={`${list.link}`}>
                   <a
+                    target={list?.title === 'Contact' ? '_blank' : '_self'}
                     className={
                         `${router.asPath === list.link
                           ? 'text-[#D3DB22]'

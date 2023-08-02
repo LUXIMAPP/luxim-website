@@ -59,10 +59,11 @@ const Navbar = () => {
             {' '}
             {/*  remove padding when watch demo is added */}
             <Box display="flex" gap={10} alignItems="center">
-              {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: '/#contact' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index !== 2 ? (
+              {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: 'https://luximapp.freshdesk.com/support/home' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index !== 2 ? (
                 <ListItem key={list.title} display={{ base: 'none', lg: 'flex' }} textTransform="uppercase">
                   <Link href={`${list.link}`}>
                     <a
+                      target={list?.title === 'Contact' ? '_blank' : '_self'}
                       className={
                         `${router.asPath === list.link
                           ? 'text-[#D3DB22]'
