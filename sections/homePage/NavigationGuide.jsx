@@ -1,11 +1,9 @@
 import { Box, Text } from '@chakra-ui/react';
-import Image from 'next/image';
 import React from 'react';
 import Wrapper from '../../components/Wrapper';
 import AppButton from '../../components/AppButton';
 import correctIcon from '../../public/images&svgs/homePage/navigationGuide/correctIcon.svg';
 import NumberedListBox from '../../components/NumberedListBox';
-import videoPlaceholder from '../../public/images&svgs/navigationGuide/videoPlaceholder.jpg';
 
 const NavigationGuide = () => {
   const items = [
@@ -78,7 +76,14 @@ const NavigationGuide = () => {
             </Box>
           </Box>
           <Box width={{ base: '100%', lg: '55%' }} mt={{ base: 10, lg: 0 }}>
-            <Image src={videoPlaceholder} alt="video demo place holder" />
+            <video controls width="640" height="360" playsInline>
+              <source
+                src="https://luxim-images.s3.us-east-2.amazonaws.com/videos/Luxim+final+video+MP4.mp4"
+                type="video/mp4"
+              />
+              <track kind="captions" label="English" srcLang="en" />
+              Your browser does not support the video tag.
+            </video>
           </Box>
         </Box>
         <Box
