@@ -41,6 +41,7 @@ export const CustomerGrowth = () => (
           title="Chat with us"
           color="white"
           theme="brand.primary1"
+          width="100%"
         />
       </a>
     </Box>
