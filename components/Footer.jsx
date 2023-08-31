@@ -10,6 +10,7 @@ import facebook from '../public/images&svgs/footer/Facebook logo.svg';
 import twitter from '../public/images&svgs/footer/Twitter logo.svg';
 import instagram from '../public/images&svgs/footer/Instagram logo.svg';
 import linkedin from '../public/images&svgs/footer/LinkedIn logo.svg';
+import youtube from '../public/images&svgs/footer/YouTube logo.svg';
 import tiktok from '../public/images&svgs/footer/tiktok-logo.svg';
 import Wrapper from './Wrapper';
 
@@ -114,7 +115,7 @@ const Footer = ({ isFloatingCardExist }) => {
                 { logo: instagram, link: 'https://www.instagram.com/luximapp/', alt: 'Instagram icon logo' },
                 { logo: linkedin, link: 'https://www.linkedin.com/company/luxim/', alt: 'LinkedIn icon logo' },
                 { logo: tiktok, link: 'https://www.tiktok.com/@luximapp?_t=8fF5PLbbi50&_r=1', alt: 'Tiktok icon logo' },
-                // { logo: youtube, link: '#', alt: 'YouTube icon logo' },
+                { logo: youtube, link: 'https://youtube.com/@LuximApp?si=lAE7Kt8dcGZrQHPP', alt: 'YouTube icon logo' },
               ].map((item) => (
                 <a key={item.alt} href={item.link} target="_blank" rel="noreferrer">
                   <Image src={item.logo} alt={item.alt} />
