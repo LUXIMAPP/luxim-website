@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.luximapp.com
+
+# Sitemaps
+Sitemap: https://www.luximapp.com/sitemap.xml
