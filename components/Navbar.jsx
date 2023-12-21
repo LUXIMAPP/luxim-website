@@ -38,15 +38,15 @@ const Navbar = () => {
               {[
                 { title: 'Home', link: '/' },
                 { title: 'About', link: '/about' },
+                { title: 'Blog', link: 'https://blog.luximapp.com/' },
               ].map((list) => (
                 <ListItem key={list.title} textTransform="uppercase">
                   <Link href={`${list.link}`}>
                     <a
-                      className={
-                        `${router.asPath === list.link
-                          ? 'text-[#D3DB22]'
-                          : ''} hover:text-[#D3DB22]`
-          }
+                      className={`${
+                        router.asPath === list.link ? 'text-[#D3DB22]' : ''
+                      } hover:text-[#D3DB22]`}
+                      target={list?.title === 'Blog' ? '_blank' : '_self'}
                     >
                       {list.title}
                     </a>
@@ -59,43 +59,57 @@ const Navbar = () => {
             {' '}
             {/*  remove padding when watch demo is added */}
             <Box display="flex" gap={10} alignItems="center">
-              {[{ title: 'FAQs', link: '/faqs' }, { title: 'Contact', link: 'https://support.luximapp.com/support/tickets/new' }, { title: 'Watch Demo', link: '/#demo' }].map((list, index) => (index !== 2 ? (
-                <ListItem key={list.title} display={{ base: 'none', lg: 'flex' }} textTransform="uppercase">
-                  <Link href={`${list.link}`}>
-                    <a
-                      target={list?.title === 'Contact' ? '_blank' : '_self'}
-                      className={
-                        `${router.asPath === list.link
-                          ? 'text-[#D3DB22]'
-                          : ''} hover:text-[#D3DB22]`
-          }
-                    >
-                      {list.title}
-                    </a>
-                  </Link>
-                </ListItem>
-              ) : (null
-              // <AppButton
-              //   theme="brand.lemon"
-              //   display="flex"
-              //   alignItems="center"
-              //   fontWeight="400"
-              //   gap={3}
-              //   key={list}
-              //   p={{ base: 2, lg: 6 }}
-              //   onMouseEnter={() => setIsHover(true)}
-              //   onMouseLeave={() => setIsHover(false)}
-              //   isHover={isHover}
-              // >
-              //   <Play color={isHover ? 'white' : '#102816'} />
-              //   <Link href={`${list.link}`}>
-              //     <a className={`text-${isHover ? 'white' : 'black'}
-              // min-[360px]:text-xs lg:text-lg`} key={list.title}>{list.title}</a>
-              //   </Link>
-              // </AppButton>
-              )))}
+              {[
+                { title: 'FAQs', link: '/faqs' },
+                {
+                  title: 'Contact',
+                  link: 'https://support.luximapp.com/support/tickets/new',
+                },
+                { title: 'Watch Demo', link: '/#demo' },
+              ].map(
+                (list, index) => (index !== 2 ? (
+                  <ListItem
+                    key={list.title}
+                    display={{ base: 'none', lg: 'flex' }}
+                    textTransform="uppercase"
+                  >
+                    <Link href={`${list.link}`}>
+                      <a
+                        target={
+                            list?.title === 'Contact' ? '_blank' : '_self'
+                          }
+                        className={`${
+                          router.asPath === list.link ? 'text-[#D3DB22]' : ''
+                        } hover:text-[#D3DB22]`}
+                      >
+                        {list.title}
+                      </a>
+                    </Link>
+                  </ListItem>
+                ) : null),
+                // <AppButton
+                //   theme="brand.lemon"
+                //   display="flex"
+                //   alignItems="center"
+                //   fontWeight="400"
+                //   gap={3}
+                //   key={list}
+                //   p={{ base: 2, lg: 6 }}
+                //   onMouseEnter={() => setIsHover(true)}
+                //   onMouseLeave={() => setIsHover(false)}
+                //   isHover={isHover}
+                // >
+                //   <Play color={isHover ? 'white' : '#102816'} />
+                //   <Link href={`${list.link}`}>
+                //     <a className={`text-${isHover ? 'white' : 'black'}
+                // min-[360px]:text-xs lg:text-lg`} key={list.title}>{list.title}</a>
+                //   </Link>
+                // </AppButton>
+              )}
             </Box>
-            <Box display={{ base: 'block', lg: 'none' }} width="35px"><HamburgerMenu /></Box>
+            <Box display={{ base: 'block', lg: 'none' }} width="35px">
+              <HamburgerMenu />
+            </Box>
           </Box>
         </UnorderedList>
       </Wrapper>
