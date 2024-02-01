@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
               { title: 'FAQs', link: '/faqs' },
               {
                 title: 'Contact',
-                link: 'https://luximapp.freshdesk.com/support/home',
+                link: 'https://bit.ly/46yTIxB',
               },
             ].map((list) => (
               <ListItem key={list.title} textTransform="uppercase">

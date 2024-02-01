@@ -73,7 +73,7 @@ const Footer = ({ isFloatingCardExist }) => {
               {[
                 { link: '/about', title: 'About' },
                 { link: '/faqs', title: 'FAQs' },
-                { link: 'https://support.luximapp.com/support/tickets/new', title: 'Contact' },
+                { link: 'https://bit.ly/46yTIxB', title: 'Contact' },
               ].map((item) => (
                 <ListItem _hover={{ color: 'brand.primary2' }} key={item.title}>
                   <Link href={`${item.link}`}>

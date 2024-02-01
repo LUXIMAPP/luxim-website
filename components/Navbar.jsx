@@ -63,7 +63,7 @@ const Navbar = () => {
                 { title: 'FAQs', link: '/faqs' },
                 {
                   title: 'Contact',
-                  link: 'https://support.luximapp.com/support/tickets/new',
+                  link: 'https://bit.ly/46yTIxB',
                 },
                 { title: 'Watch Demo', link: '/#demo' },
               ].map(

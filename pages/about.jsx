@@ -33,7 +33,7 @@ export const CustomerGrowth = () => (
         />
       </a>
       <a
-        href="https://luximapp.freshdesk.com/support/home"
+        href="https://bit.ly/46yTIxB"
         target="_blank"
         rel="noreferrer"
       >
