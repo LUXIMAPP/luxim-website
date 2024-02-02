@@ -9,12 +9,10 @@ import Wrapper from '../../components/Wrapper';
 import appleStore from '../../public/images&svgs/appStore.svg';
 import googlePlay from '../../public/images&svgs/googlePlay.svg';
 import useJoinWaitList from './useJoinWaitList';
-import { useDisplayInfoToast } from '../faqPage/FAQ';
 
 const Hero = () => {
   const [userEmail, setUserEmail] = useState('');
   const { onClick: joinWaitlist, loader } = useJoinWaitList(setUserEmail);
-  const displayToastBody = useDisplayInfoToast();
   return (
     <Wrapper showRightPadding={{ base: 6, md: 32, lg: 0 }} overflowX="hidden">
       <Box
@@ -95,13 +93,13 @@ const Hero = () => {
             >
               {[
                 {
-                  link: '#',
+                  link: 'https://apps.apple.com/us/app/luxim/id6474195689',
                   image: appleStore,
                   id: 'apple-store',
                   alt: 'download for apple store button',
                 },
                 {
-                  link: '#',
+                  link: 'https://play.google.com/store/apps/details?id=com.luxim',
                   image: googlePlay,
                   id: 'google-play',
                   alt: 'download for google play store button',
@@ -118,7 +116,7 @@ const Hero = () => {
                     }}
                     padding="0"
                     mb={{ base: 3, lg: 0 }}
-                    onClick={displayToastBody}
+                    onClick={() => window.open(button.link, '_blank')}
                   >
                     <Image src={button.image} alt={button.alt} />
                   </AppButton>
