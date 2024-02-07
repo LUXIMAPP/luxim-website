@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import logo from '../public/images&svgs/navbar/logo.svg';
 import Wrapper from './Wrapper';
 import HamburgerMenu from './HamburgerMenu';
+import handleScroll from '../utils/handleScroll';
 
 const Navbar = () => {
   const router = useRouter();
@@ -61,51 +62,30 @@ const Navbar = () => {
             <Box display="flex" gap={10} alignItems="center">
               {[
                 { title: 'FAQs', link: '/faqs' },
-                {
-                  title: 'Contact',
-                  link: 'https://bit.ly/46yTIxB',
-                },
-                { title: 'Watch Demo', link: '/#demo' },
-              ].map(
-                (list, index) => (index !== 2 ? (
-                  <ListItem
-                    key={list.title}
-                    display={{ base: 'none', lg: 'flex' }}
-                    textTransform="uppercase"
-                  >
-                    <Link href={`${list.link}`}>
-                      <a
-                        target={
-                            list?.title === 'Contact' ? '_blank' : '_self'
-                          }
-                        className={`${
-                          router.asPath === list.link ? 'text-[#D3DB22]' : ''
-                        } hover:text-[#D3DB22]`}
-                      >
-                        {list.title}
-                      </a>
-                    </Link>
-                  </ListItem>
-                ) : null),
-                // <AppButton
-                //   theme="brand.lemon"
-                //   display="flex"
-                //   alignItems="center"
-                //   fontWeight="400"
-                //   gap={3}
-                //   key={list}
-                //   p={{ base: 2, lg: 6 }}
-                //   onMouseEnter={() => setIsHover(true)}
-                //   onMouseLeave={() => setIsHover(false)}
-                //   isHover={isHover}
-                // >
-                //   <Play color={isHover ? 'white' : '#102816'} />
-                //   <Link href={`${list.link}`}>
-                //     <a className={`text-${isHover ? 'white' : 'black'}
-                // min-[360px]:text-xs lg:text-lg`} key={list.title}>{list.title}</a>
-                //   </Link>
-                // </AppButton>
-              )}
+                // { title: 'Watch Demo', link: '/#demo' },
+              ].map((list, index) => (index !== 2 ? (
+                <ListItem
+                  key={list.title}
+                  display={{ base: 'none', lg: 'flex' }}
+                  textTransform="uppercase"
+                >
+                  <Link href={`${list.link}`}>
+                    <a
+                      target={list?.title === 'Contact' ? '_blank' : '_self'}
+                      className={`${
+                        router.asPath === list.link ? 'text-[#D3DB22]' : ''
+                      } hover:text-[#D3DB22]`}
+                    >
+                      {list.title}
+                    </a>
+                  </Link>
+                </ListItem>
+              ) : null))}
+              <ListItem _hover={{ color: 'brand.primary2' }}>
+                <button type="button" onClick={handleScroll}>
+                  Contact
+                </button>
+              </ListItem>
             </Box>
             <Box display={{ base: 'block', lg: 'none' }} width="35px">
               <HamburgerMenu />

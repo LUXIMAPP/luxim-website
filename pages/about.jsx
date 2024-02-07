@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 import FooterCard from '../components/FooterCard';
 
 export const CustomerGrowth = () => (
-  <FooterCard textAlign="center">
+  <FooterCard textAlign="center" id="contact-card">
     <Text fontSize="30px" lineHeight="38px" fontWeight="600" mb={4} as="h4">
       Join over 4,000+ customers already growing with Luxim.
     </Text>

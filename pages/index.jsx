@@ -8,11 +8,11 @@ import About from '../sections/homePage/About';
 import AppShell from '../components/AppShell';
 import Hero from '../sections/homePage/Hero';
 import NavigationGuide from '../sections/homePage/NavigationGuide';
-// import ScanCode from '../sections/homePage/ScanCode';
 import { calculateTimeLeft } from '../customHooks/useCountdown';
 import Footer from '../components/Footer';
 import CallToActionSection from '../sections/homePage/CallToActionSection';
 import CallToActionDescription from '../sections/homePage/CallToActionDescription';
+import { CustomerGrowth } from './about';
 
 const Home = () => {
   const router = useRouter();
@@ -101,9 +101,9 @@ const Home = () => {
             Inspiration lives here!
           </Text>
         </Box>
-        {/* <ScanCode /> */}
+        <CustomerGrowth />
       </AppShell>
-      <Footer isFloatingCardExist={false} />
+      <Footer isFloatingCardExist />
     </>
   );
 };
