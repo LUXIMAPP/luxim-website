@@ -13,7 +13,6 @@ import linkedin from '../public/images&svgs/footer/LinkedIn logo.svg';
 import youtube from '../public/images&svgs/footer/YouTube logo.svg';
 import tiktok from '../public/images&svgs/footer/tiktok-logo.svg';
 import Wrapper from './Wrapper';
-import handleScroll from '../utils/handleScroll';
 
 const Footer = ({ isFloatingCardExist }) => {
   const date = new Date();
@@ -95,9 +94,6 @@ const Footer = ({ isFloatingCardExist }) => {
                   </Link>
                 </ListItem>
               ))}
-              <ListItem _hover={{ color: 'brand.primary2' }}>
-                <button type="button" onClick={handleScroll}>Contact</button>
-              </ListItem>
             </UnorderedList>
           </Box>
         </Box>
