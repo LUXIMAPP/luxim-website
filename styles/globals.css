@@ -154,4 +154,63 @@ html {
 .counter {
   animation: countUp 1s ease-in-out;
 }
+  
+.soft-bounce{
+  animation: key .9s ease infinite alternate;
+}
 
+@keyframes key{
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(-10px);}
+}
+
+.constant-tilt-shake {
+  animation: tilt-shaking 2s infinite linear;
+}
+
+.constant-tilt-shake-opposite {
+  animation: tilt-shaking-opposite 2s infinite linear;
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-1deg); }
+  40% { transform: rotate(1deg); }
+  60% { transform: rotate(-1deg); }
+  80% { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes tilt-shaking-opposite {
+  0% { transform: rotate(1deg); }
+  20% { transform: rotate(-1deg); }
+  40% { transform: rotate(0deg); }
+  60% { transform: rotate(1deg); }
+  80% { transform: rotate(-1deg); }
+  100% { transform: rotate(1deg); }
+}
+
+.wave-animation span {
+  display: inline-block;
+  animation: wave-text 1s ease-in-out infinite;
+}
+
+.wave-animation {
+  span:nth-of-type(1){ animation-delay: 0.0s; }
+  span:nth-of-type(2){ animation-delay: 0.2s; }
+  span:nth-of-type(3){ animation-delay: 0.6s; }
+  span:nth-of-type(4){ animation-delay: 0.8s; }
+  span:nth-of-type(5){ animation-delay: 1s; }
+}
+
+@keyframes wave-text{
+  00%{
+    transform: translateY(0em);
+  }
+  60%{
+    transform: translateY(-0.04em);
+  }
+  100%{
+    transform: translateY(0em);
+  }
+}
