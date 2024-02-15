@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import AppButton from '../../../components/AppButton';
-import moneyForCloth from '../../../public/landingPage/moneyForCloth.svg';
+import shopping from '../../../public/landingPage/images/money-for-cloth.png';
 import useHeroLogic from './useHeroLogic';
 
 const Hero = () => {
@@ -56,7 +56,9 @@ const Hero = () => {
         />
       </Box>
       <Box marginTop="72px" marginBottom={{ base: '68px', lg: '143px' }} maxW="886.79px" className="soft-bounce">
-        <Image src={moneyForCloth} alt="money for cloth hero section img" />
+        <Box>
+          <Image src={shopping} alt="money for cloth hero section img" />
+        </Box>
       </Box>
       <Box maxW="908px" textAlign="center" mb={{ base: 8, lg: 16 }}>
         <Text fontSize="14px" fontWeight="500" color="brand.primary1" mb={2}>

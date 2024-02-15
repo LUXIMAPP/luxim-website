@@ -1,7 +1,5 @@
-import { Box, Text } from '@chakra-ui/react';
-import Image from 'next/image';
+import { Box, Text, Image } from '@chakra-ui/react';
 import AppButton from '../../../components/AppButton';
-import rightImg from '../../../public/landingPage/handOnPhone.svg';
 
 const GetStarted = () => (
   <Box display="flex" flexDirection={{ base: 'column', lg: 'row' }}>
@@ -27,7 +25,7 @@ const GetStarted = () => (
       />
     </Box>
     <Box w={{ base: '100%', lg: '50%' }} bgColor="brand.lemon">
-      <Image src={rightImg} className="soft-bounce" />
+      <Image src="/landingPage/images/hand-on-phone.png" className="soft-bounce" />
     </Box>
   </Box>
 );

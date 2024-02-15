@@ -16,7 +16,7 @@ const useHeroLogic = () => {
       icon: location,
       heading: 'We have your Logistics Covered',
       description:
-            'Forget delivery worries. With our dedicated shipping service in Lagos, we ensure prompt delivery from Lekki to Ikorodu and beyond',
+            'Forget delivery worries. With our dedicated shipping service in Lagos, we ensure prompt delivery from Lekki to Ikorodu and beyond.',
       bgColor: '#EDEBFA',
       iconBg: '#C8C2F0',
     },

@@ -90,7 +90,7 @@ const FAQ = () => (
                   <Text
                     as="span"
                     onClick={() => window.open(
-                      'https://play.google.com/store/apps/details?id=com.luxim',
+                      'https://luximapp.onelink.me/tfyu/u02sgy3c',
                       '_blank',
                     )}
                     cursor="pointer"

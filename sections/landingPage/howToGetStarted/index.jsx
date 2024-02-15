@@ -1,27 +1,23 @@
-import { Box, Text } from '@chakra-ui/react';
-import Image from 'next/image';
-import createAccount from '../../../public/landingPage/createAccount.svg';
-import upload from '../../../public/landingPage/upload.svg';
-import explore from '../../../public/landingPage/explore.svg';
+import { Box, Text, Image } from '@chakra-ui/react';
 
 const HowToGetStarted = () => {
   const steps = [
     {
       title: 'Create a Free Account',
       description: 'Download Luxim and create a free account within 2 minutes',
-      img: createAccount,
+      img: '/landingPage/images/create-account.png',
     },
     {
       title: 'Upload Product',
       description:
         'Snap, upload, and sell. We handle the logistics while you watch your earnings grow.',
-      img: upload,
+      img: '/landingPage/images/upload.png',
     },
     {
       title: 'Explore Fashion Finds',
       description:
         'Dive into our vast collection of fashion items. Shop, bargain, add to your wishlist, and more.',
-      img: explore,
+      img: '/landingPage/images/explore.png',
     },
   ];
   return (
@@ -68,14 +64,19 @@ const HowToGetStarted = () => {
             borderColor="#EAECF0 !important"
           >
             <Box
-              maxw="344px"
+              // maxw="344px"
               // maxH="208px"
               border="1px"
               borderColor="#EAECF0"
               rounded="8px"
+              className="flex justify-center"
               mb={6}
             >
-              <Image src={step.img} className="max-h-[208px]" />
+              <Image
+                src={step.img}
+                maxw="344px"
+                maxH="208px"
+              />
             </Box>
             <Box maxW="344px">
               <Text

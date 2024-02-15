@@ -1,10 +1,5 @@
-import { Box, Text } from '@chakra-ui/react';
-import Image from 'next/image';
+import { Box, Image, Text } from '@chakra-ui/react';
 import AppButton from '../../../components/AppButton';
-import greenWorld from '../../../public/landingPage/greenWorld.svg';
-import bus from '../../../public/landingPage/bus.svg';
-import bargain from '../../../public/landingPage/bargain.svg';
-import safePayment from '../../../public/landingPage/safePayment.svg';
 
 const CallToAction = () => {
   const sections = [
@@ -14,7 +9,7 @@ const CallToAction = () => {
       description:
         'Get the Luxim app. Reduce fashion waste, and save the earth one wardrobe sale at a time from your mobile phone.',
       bg: '#F2FFF9',
-      img: greenWorld,
+      img: '/landingPage/images/green-world.png',
       imgBg: '#D6FFEB',
     },
     {
@@ -23,7 +18,7 @@ const CallToAction = () => {
       description:
         'Experience lightning-fast deliveries, even in Lagos traffic. Our dedicated riders ensure your order is picked up and delivered promptly.',
       bg: '#D5DB20',
-      img: bus,
+      img: '/landingPage/images/bus.png',
       imgBg: '#F7F8CE',
     },
     {
@@ -32,7 +27,7 @@ const CallToAction = () => {
       description:
         'On Luxim, sellers can enable auctions, while buyers enjoy the thrill of bargaining, just like in Alaba market',
       bg: '#FCFDF2',
-      img: bargain,
+      img: '/landingPage/images/bargain.png',
       imgBg: '#F7F8D3',
     },
     {
@@ -41,7 +36,7 @@ const CallToAction = () => {
       description:
         'Luxim offers various payment options, ensuring secure transactions. Enjoy low fees and keep the most of your earnings with our straightforward fee structure.',
       bg: '#FAF9FD',
-      img: safePayment,
+      img: '/landingPage/images/safe-payment.png',
       imgBg: '#EDEBFA',
     },
   ];
@@ -62,11 +57,10 @@ const CallToAction = () => {
           <Box
             width={{ base: '100%', lg: '50%' }}
             bgColor={section.imgBg}
-            className={`${index % 2 === 0 ? 'constant-tilt-shake' : 'constant-tilt-shake-opposite'}`}
+            className={`${index % 2 === 0 ? 'constant-tilt-shake' : 'constant-tilt-shake-opposite'} flex justify-center`}
+            maxH={{ base: '284px', lg: '414px' }}
           >
-            <Box maxW={{ base: '358px', lg: '622.5px' }} maxH={{ base: '284px', lg: '414px' }} display="flex" justifyContent="center" mx="auto">
-              <Image src={section.img} />
-            </Box>
+            <Image src={section.img} w={`${section.title === 'Bargain for items' ? '100%' : '60%'}`} />
           </Box>
           <Box width={{ base: '100%', lg: '50%' }}>
             <Text fontSize="14px" fontWeight="500" mb={2}>
