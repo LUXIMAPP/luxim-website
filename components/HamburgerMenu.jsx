@@ -6,6 +6,7 @@ import {
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Squash as Hamburger } from 'hamburger-react';
+import handleScroll from '../utils/handleScroll';
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +25,6 @@ const HamburgerMenu = () => {
               { title: 'About', link: '/about' },
               { title: 'Blog', link: 'https://blog.luximapp.com/' },
               { title: 'FAQs', link: '/faqs' },
-              {
-                title: 'Contact',
-                link: 'https://bit.ly/46yTIxB',
-              },
             ].map((list) => (
               <ListItem key={list.title} textTransform="uppercase">
                 <Link href={`${list.link}`}>
@@ -46,6 +43,11 @@ const HamburgerMenu = () => {
                 </Link>
               </ListItem>
             ))}
+            <ListItem _hover={{ color: 'brand.primary2' }} className="block lg:hidden">
+              <button type="button" onClick={handleScroll} className="text-[16px]">
+                CONTACT
+              </button>
+            </ListItem>
           </UnorderedList>
         </Slide>
       </Box>

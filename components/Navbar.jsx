@@ -81,9 +81,9 @@ const Navbar = () => {
                   </Link>
                 </ListItem>
               ) : null))}
-              <ListItem _hover={{ color: 'brand.primary2' }}>
+              <ListItem _hover={{ color: 'brand.primary2' }} className="hidden lg:block">
                 <button type="button" onClick={handleScroll}>
-                  Contact
+                  CONTACT
                 </button>
               </ListItem>
             </Box>
