@@ -2,12 +2,12 @@
 const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
-  images : {unoptimized : true},
+  images: { unoptimized: true },
   experimental: {
-        images: {
-            unoptimized: true
-        }
-    }
+    images: {
+      unoptimized: true,
+    },
+  },
 };
 
 module.exports = nextConfig;
