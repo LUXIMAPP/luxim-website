@@ -19,7 +19,7 @@ const Navbar = () => {
             color="white"
             fontSize="14px"
             padding="8px 16px"
-            onClick={() => window.open('/press/thank-you', '_blank')}
+            onClick={() => window.open('/thank-you', '_blank')}
           />
         )}
     </div>

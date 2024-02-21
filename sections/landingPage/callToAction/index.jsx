@@ -72,7 +72,7 @@ const CallToAction = () => {
             <Text my={{ base: 4, lg: 6 }}>{section.description}</Text>
             <AppButton
               title={index % 2 === 0 ? 'Get Luxim Now' : 'Donwload Luxim Now'}
-              onClick={() => window.open('/press/thank-you', '_blank')}
+              onClick={() => window.open('/thank-you', '_blank')}
               theme="brand.primary1"
               color="white"
               fontSize="14px"
