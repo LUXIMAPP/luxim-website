@@ -29,7 +29,7 @@ const ThankYouPage = () => {
           </Text>
           <AppButton
             title="Back to Home"
-            onClick={() => router.push('/press')}
+            onClick={() => router.push('/')}
             theme="brand.primary1"
             color="white"
             fontSize="14px"

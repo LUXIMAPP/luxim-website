@@ -52,7 +52,7 @@ const Hero = () => {
           fontSize="14px"
           padding="8px 16px"
           width="fit-content"
-          onClick={() => window.open('/thank-you', '_blank')}
+          onClick={() => window.open('https://download.luximapp.com/thank-you/', '_blank')}
         />
       </Box>
       <Box marginTop="72px" marginBottom={{ base: '68px', lg: '143px' }} maxW="886.79px" className="soft-bounce">
