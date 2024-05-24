@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Box, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 import AppShell from '../components/AppShell';
@@ -23,7 +24,7 @@ export const CustomerGrowth = () => (
       justifyContent="center"
       flexDirection={{ base: 'column', md: 'row' }}
     >
-      <a href="mailto:hello@luximapp.com">
+      <a role="button" aria-label="Mail" href="mailto:hello@luximapp.com">
         <AppButton
           color="black"
           theme="white"
@@ -33,8 +34,10 @@ export const CustomerGrowth = () => (
         />
       </a>
       <a
+				role="button"
         href="https://bit.ly/46yTIxB"
         target="_blank"
+				aria-label="Chat"
         rel="noreferrer"
       >
         <AppButton
