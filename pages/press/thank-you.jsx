@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Navbar from '../../components/landingPage/Navbar';
 import AppButton from '../../components/AppButton';
+import SnapchatPixel from '../../components/SnapchatPixel';
 
 const ThankYouPage = () => {
   const router = useRouter();
@@ -13,6 +14,7 @@ const ThankYouPage = () => {
   }, []);
   return (
     <>
+      <SnapchatPixel />
       <Navbar />
       <Box display="flex" flexDirection="column" justifyContent="center" textAlign="center" mt={{ base: 8, lg: 32 }} px={4}>
         <Box>
