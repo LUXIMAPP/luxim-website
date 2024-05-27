@@ -33,7 +33,8 @@ const SnapchatPixel = () => {
                 \'https://sc-static.net/scevent.min.js\');
                 snaptr('init', '922e07af-fcec-483a-a6b0-1135d5c987ee', {
                   'user_email': '__INSERT_USER_EMAIL__'
-                })`}
+                });
+                snaptr('track', 'PAGE_VIEW')`}
             </Script>
         </>
     );
