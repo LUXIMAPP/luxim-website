@@ -24,6 +24,7 @@ class MyDocument extends Document {
               })(window,document,'script','dataLayer','GTM-TH7879DD');`,
             }}
           />
+          {/* <script async src="/scripts/mailerlite.js"></script> */}
           <Script
             strategy="afterInteractive"
             id="luxim12345_67890facebook"
@@ -38,6 +39,18 @@ class MyDocument extends Document {
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '619737427023961');
               fbq('track', 'PageView');`,
+            }}
+          />
+          <Script
+            id="mailerlite"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+                .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+                n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+                (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+                ml('account', '644121');
+              `,
             }}
           />
         </Head>

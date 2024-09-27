@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import dynamic from 'next/dynamic';
 import { Box, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Head from 'next/head';
 import CountDown from '../sections/homePage/CountDown';
-import About from '../sections/homePage/About';
 import AppShell from '../components/AppShell';
 import Hero from '../sections/homePage/Hero';
 import NavigationGuide from '../sections/homePage/NavigationGuide';
@@ -25,6 +25,8 @@ const Home = () => {
     days, hours, minutes, seconds,
   } = calculateTimeLeft();
   const remainingTime = days + hours + minutes + seconds;
+
+  const NoSSR = dynamic(() => import('../sections/homePage/About'), { ssr: false });
 
   return (
     <>
@@ -77,7 +79,7 @@ const Home = () => {
             <NavigationGuide />
             <CallToActionDescription />
             <CallToActionSection />
-            <About />
+            <NoSSR />
           </Box>
         </Box>
         <Box overflowX="hidden">
