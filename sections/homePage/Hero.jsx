@@ -11,8 +11,16 @@ import googlePlay from '../../public/images&svgs/googlePlay.svg';
 import useJoinWaitList from './useJoinWaitList';
 
 const Hero = () => {
-  const [userEmail, setUserEmail] = useState('');
-  const { onClick: joinWaitlist, loader } = useJoinWaitList(setUserEmail);
+  const isApple = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+
+  const navigateToStore = () => {
+    if (isApple) {
+      window.open("https://apps.apple.com/us/app/luxim/id6474195689");
+    } else {
+      window.open("https://play.google.com/store/apps/details?id=com.luxim");
+    }
+  }
+  
   return (
     <Wrapper showRightPadding={{ base: 6, md: 32, lg: 0 }} overflowX="hidden">
       <Box
@@ -64,23 +72,13 @@ const Hero = () => {
                 flexDirection={{ base: 'column', lg: 'row' }}
                 gap={4}
               >
-                <Input
-                  zIndex="20"
-                  placeholder="Enter your email"
-                  fontSize="12px"
-                  width={{ base: '100%', lg: '70%' }}
-                  style={{ padding: '0.5rem', height: '3.15rem' }}
-                  onChange={(e) => setUserEmail(e.target.value)}
-                  value={userEmail}
-                />
                 <AppButton
                   zIndex="20"
                   theme="brand.primary1"
-                  title="Join the waitlist"
+                  title="Join the community"
                   color="white"
-                  onClick={(e) => joinWaitlist(e, userEmail)}
-                  type="submit"
-                  isLoading={loader}
+                  onClick={navigateToStore}
+                  type="button"
                 />
               </Box>
             </form>

@@ -214,3 +214,23 @@ html {
     transform: translateY(0em);
   }
 }
+
+.ml-embedded {
+  margin-bottom: 1rem !important;
+  font-family: "Plus Jakarta Sans", "Helvetiva Neue", Helvetica, sans-serif !important;
+}
+
+.ml-form-embedContent h4,
+.ml-form-successContent h4,
+.ml-form-errorContent {
+  font-weight: 500 !important;
+  text-align: center !important;
+}
+
+.ml-embedded .ml-form-embedWrapper {
+  width: 100% !important;
+  max-width: 80% !important;
+  background: inherit !important;
+  background-color: inherit !important;
+  text-align: center !important;
+}

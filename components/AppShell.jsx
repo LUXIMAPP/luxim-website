@@ -64,7 +64,6 @@ const AppShell = ({ children }) => {
           color={reachedFooter ? 'white' : 'black'}
         />
       </Box>
-      {/* <Footer /> */}
     </>
   );
 };

@@ -12,6 +12,7 @@ import FooterCard from '../components/FooterCard';
 
 export const CustomerGrowth = () => (
   <FooterCard textAlign="center" id="contact-card">
+    <div className="ml-embedded" data-form="TEv6Sb"></div>
     <Text fontSize="30px" lineHeight="38px" fontWeight="600" mb={4} as="h4">
       Join over 4,000+ customers already growing with Luxim.
     </Text>
@@ -107,7 +108,9 @@ const About = () => (
         <Text>Fumnanya and Mary,</Text>
         <Text> Co-Founders of Luxim.</Text>
       </Wrapper>
+      
       <CustomerGrowth />
+      <div className="ml-embedded" data-form="TEv6Sb"></div>
     </AppShell>
     <Footer isFloatingCardExist />
   </>
