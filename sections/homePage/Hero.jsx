@@ -8,10 +8,16 @@ import AppButton from '../../components/AppButton';
 import Wrapper from '../../components/Wrapper';
 import appleStore from '../../public/images&svgs/appStore.svg';
 import googlePlay from '../../public/images&svgs/googlePlay.svg';
-import useJoinWaitList from './useJoinWaitList';
+import { useEffect } from 'react';
 
 const Hero = () => {
-  const isApple = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+  const [isApple, setIsApple] = useState(false);
+
+  useEffect(() => {
+    if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+      setIsApple(true);
+    }
+  }, []);
 
   const navigateToStore = () => {
     if (isApple) {
@@ -20,7 +26,7 @@ const Hero = () => {
       window.open("https://play.google.com/store/apps/details?id=com.luxim");
     }
   }
-  
+
   return (
     <Wrapper showRightPadding={{ base: 6, md: 32, lg: 0 }} overflowX="hidden">
       <Box

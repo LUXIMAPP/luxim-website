@@ -10,47 +10,50 @@ import Wrapper from '../components/Wrapper';
 import Footer from '../components/Footer';
 import FooterCard from '../components/FooterCard';
 
-export const CustomerGrowth = () => (
-  <FooterCard textAlign="center" id="contact-card">
-    <div className="ml-embedded" data-form="TEv6Sb"></div>
-    <Text fontSize="30px" lineHeight="38px" fontWeight="600" mb={4} as="h4">
-      Join over 4,000+ customers already growing with Luxim.
-    </Text>
-    <Text mb={8} fontSize="18px">
-      Still have questions?
-    </Text>
-    <Box
-      display="flex"
-      gap={3}
-      justifyContent="center"
-      flexDirection={{ base: 'column', md: 'row' }}
-    >
-      <a role="button" aria-label="Mail" href="mailto:hello@luximapp.com">
-        <AppButton
-          color="black"
-          theme="white"
-          width="100%"
-          boxShadow="0px 1px 2px rgba(16, 24, 40, 0.05)"
-          title="Email us"
-        />
-      </a>
-      <a
-				role="button"
-        href="https://bit.ly/46yTIxB"
-        target="_blank"
-				aria-label="Chat"
-        rel="noreferrer"
+export const CustomerGrowth = () => {
+  return (
+    <FooterCard textAlign="center" id="contact-card">
+      {/* {showNewsletter && <div className="ml-embedded" data-form="TEv6Sb" />} */}
+      <div className="ml-embedded" data-form="TEv6Sb" />
+      <Text fontSize="30px" lineHeight="38px" fontWeight="600" mb={4} as="h4">
+        Join over 4,000+ customers already growing with Luxim.
+      </Text>
+      <Text mb={8} fontSize="18px">
+        Still have questions?
+      </Text>
+      <Box
+        display="flex"
+        gap={3}
+        justifyContent="center"
+        flexDirection={{ base: 'column', md: 'row' }}
       >
-        <AppButton
-          title="Chat with us"
-          color="white"
-          theme="brand.primary1"
-          width="100%"
-        />
-      </a>
-    </Box>
-  </FooterCard>
-);
+        <a role="button" aria-label="Mail" href="mailto:hello@luximapp.com">
+          <AppButton
+            color="black"
+            theme="white"
+            width="100%"
+            boxShadow="0px 1px 2px rgba(16, 24, 40, 0.05)"
+            title="Email us"
+          />
+        </a>
+        <a
+          role="button"
+          href="https://bit.ly/46yTIxB"
+          target="_blank"
+          aria-label="Chat"
+          rel="noreferrer"
+        >
+          <AppButton
+            title="Chat with us"
+            color="white"
+            theme="brand.primary1"
+            width="100%"
+          />
+        </a>
+      </Box>
+    </FooterCard>
+  )
+}
 
 const About = () => (
   <>
