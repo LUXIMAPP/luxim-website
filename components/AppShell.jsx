@@ -42,7 +42,9 @@ const AppShell = ({ children }) => {
   return (
     <>
       <Navbar />
-      {children}
+      <Box paddingTop={100}>
+        {children}
+      </Box>
       <Box
         position="fixed"
         bottom="0"

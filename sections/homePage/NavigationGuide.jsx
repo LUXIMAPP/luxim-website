@@ -8,14 +8,17 @@ import NumberedListBox from '../../components/NumberedListBox';
 const NavigationGuide = () => {
   const items = [
     {
+      icon: "/others/moneys.png",
       title: 'Zero Capital Required',
       text: "It's free to list on Luxim! Simply go to your closet, snap a picture of an item, list it, and start making money!",
     },
     {
+      icon: "others/chart-success.png",
       title: 'Be your own boss',
       text: 'The choice is yours to set your own hours, work from home or from anywhere!',
     },
     {
+      icon: "others/truck-time.png",
       title: 'Seamless Logistics',
       text: 'We take the worry out of your logistic needs! As a member of our community, we provide doorstep pick up and deliver sold items to your clients.',
     },
@@ -56,7 +59,7 @@ const NavigationGuide = () => {
                   <React.Fragment key={item.title}>
                     <NumberedListBox
                       item={item}
-                      icon={correctIcon}
+                      icon={item.icon}
                       altText="correct icon bullet poin"
                     />
                   </React.Fragment>
@@ -76,7 +79,9 @@ const NavigationGuide = () => {
             </Box>
           </Box>
           <Box width={{ base: '100%', lg: '55%' }} mt={{ base: 10, lg: 0 }}>
-            <video controls width="640" height="360" playsInline>
+            <video controls width="640" height="360" playsInline style={{
+              boxShadow: "-1px 1px 81px 18px rgba(233,237,144,1)"
+            }}>
               <source
                 src="https://luxim-images.s3.us-east-2.amazonaws.com/videos/Luxim+final+video+MP4.mp4"
                 type="video/mp4"

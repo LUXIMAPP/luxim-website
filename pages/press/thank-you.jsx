@@ -7,6 +7,8 @@ import SnapchatPixel from '../../components/SnapchatPixel';
 
 const ThankYouPage = () => {
   const router = useRouter();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setTimeout(() => {
       router.push('https://luximapp.onelink.me/tfyu/u02sgy3c');

@@ -195,13 +195,11 @@ html {
   animation: wave-text 1s ease-in-out infinite;
 }
 
-.wave-animation {
-  span:nth-of-type(1){ animation-delay: 0.0s; }
-  span:nth-of-type(2){ animation-delay: 0.2s; }
-  span:nth-of-type(3){ animation-delay: 0.6s; }
-  span:nth-of-type(4){ animation-delay: 0.8s; }
-  span:nth-of-type(5){ animation-delay: 1s; }
-}
+.wave-animation.span:nth-of-type(1){ animation-delay: 0.0s; }
+.wave-animation.span:nth-of-type(2){ animation-delay: 0.2s; }
+.wave-animation.span:nth-of-type(3){ animation-delay: 0.6s; }
+.wave-animation.span:nth-of-type(4){ animation-delay: 0.8s; }
+.wave-animation.span:nth-of-type(5){ animation-delay: 1s; }
 
 @keyframes wave-text{
   00%{
@@ -215,9 +213,31 @@ html {
   }
 }
 
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translate(1%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+}
+
+@keyframes MoveUpDown2 {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -46%);
+  }
+}
+
 .ml-embedded {
   margin-bottom: 1rem !important;
   font-family: "Plus Jakarta Sans", "Helvetiva Neue", Helvetica, sans-serif !important;
+}
+
+.ml-form-embedContent {
+  display: none;
 }
 
 .ml-form-embedContent h4,
@@ -227,10 +247,63 @@ html {
   text-align: center !important;
 }
 
+.ml-field-group input {
+  
+}
+
+.ml-button-horizontal button[type="submit"] {
+  font-family: "Plus Jakarta Sans", "Helvetiva Neue", Helvetica, sans-serif !important;
+  border-radius: 6px;
+}
+
 .ml-embedded .ml-form-embedWrapper {
   width: 100% !important;
-  max-width: 80% !important;
+  max-width: 100% !important;
   background: inherit !important;
   background-color: inherit !important;
   text-align: center !important;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  border: 1px solid #E5E9EB;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+thead {
+  color: #1A202C;
+  background-color: #F0F3B5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+thead th {
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+tbody tr {
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #E5E9EB;
+}
+
+td {
+  padding: 15px;
+}
+
+.input-container{
+  padding: 8px 10px;
+  border-radius: 6px;
+  width: 50%;
+}
+.input-container input {
+  outline: none;
+  font-size: 14px;
+  margin-left: 10px;
 }

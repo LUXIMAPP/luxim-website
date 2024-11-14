@@ -2,7 +2,15 @@ import { Box } from '@chakra-ui/react';
 import Wrapper from './Wrapper';
 
 const FooterCard = ({ children, ...rest }) => (
-  <Wrapper display={{ base: 'block', lg: 'flex' }} padding={{ base: 3, lg: 6 }} justifyContent="center" mb={{ base: 16, lg: -131 }}>
+  <Wrapper
+    padding={{ base: 3, lg: 6 }}
+    display={{ base: 'block', lg: 'flex' }}
+    style={{
+      paddingTop: '60px',
+    }}
+    justifyContent="center"
+    mb={{ base: 16, lg: -131 }}
+  >
     <Box
       bg="brand.lightLemon"
       width={{ base: '100%', lg: '70vw' }}

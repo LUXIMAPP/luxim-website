@@ -1,16 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import dynamic from 'next/dynamic';
-import { Box, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Head from 'next/head';
 import CountDown from '../sections/homePage/CountDown';
 import AppShell from '../components/AppShell';
 import Hero from '../sections/homePage/Hero';
+import Leaderboard from '../sections/homePage/Leaderboard';
 import NavigationGuide from '../sections/homePage/NavigationGuide';
 import { calculateTimeLeft } from '../customHooks/useCountdown';
 import Footer from '../components/Footer';
-import CallToActionSection from '../sections/homePage/CallToActionSection';
+import Newsletter from '../sections/homePage/Newsletter';
 import CallToActionDescription from '../sections/homePage/CallToActionDescription';
 import { CustomerGrowth } from './about';
 
@@ -74,35 +75,16 @@ const Home = () => {
       <AppShell>
         <Box minHeight="100%">
           <Hero />
+          <Leaderboard />
           {remainingTime > 0 ? <CountDown /> : null}
           <Box display={{ base: 'flex', md: 'block' }} flexDirection="column">
             <NavigationGuide />
             <CallToActionDescription />
-            <CallToActionSection />
+            {/* <CallToActionSection /> */}
             <NoSSR />
           </Box>
         </Box>
-        <Box overflowX="hidden">
-          <Text
-            mb={{ base: 10, lg: 20 }}
-            fontSize={{ base: '26px', lg: '30px' }}
-            textAlign="center"
-            fontWeight="600"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            Join the
-            {' '}
-            <Text as="span" color="brand.secondary">
-              Luxim
-              {' '}
-            </Text>
-            community that’s changing lives
-            {' '}
-            <br />
-            Inspiration lives here!
-          </Text>
-        </Box>
+        <Newsletter />
         <CustomerGrowth />
       </AppShell>
       <Footer isFloatingCardExist />

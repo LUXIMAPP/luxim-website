@@ -14,7 +14,7 @@ const NumberedListBox = ({ item, icon, altText }) => (
     {icon
       ? (
         <Box mt={1}>
-          <Image src={icon} alt={altText} />
+          <Image src={icon} alt={altText} width="30" height="30" />
         </Box>
       )
       : (
