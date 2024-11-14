@@ -3,11 +3,11 @@ import { Box, Text } from '@chakra-ui/react';
 import Wrapper from '../../components/Wrapper';
 
 const Newsletter = () => {
-    const [showNesletter, setNewsletterState] = useState(false);
+    // const [showNesletter, setNewsletterState] = useState(false);
 
-    useEffect(() => {
-        setNewsletterState(true);
-    }, []);
+    // useEffect(() => {
+    //     setNewsletterState(true);
+    // }, []);
 
     return (
         <Box
@@ -50,7 +50,7 @@ const Newsletter = () => {
                 >
                     Subscribe to get the latest app updates, fashion tips, and exclusive blog posts delivered right to your inbox.
                 </Text>
-                {showNesletter && <div className="ml-embedded" data-form="TEv6Sb" />}
+                <div className="ml-embedded" data-form="TEv6Sb" />
             </Wrapper>
         </Box>
     );
