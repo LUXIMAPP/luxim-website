@@ -13,8 +13,6 @@ import FooterCard from '../components/FooterCard';
 export const CustomerGrowth = () => {
   return (
     <FooterCard textAlign="center" id="contact-card">
-      {/* {showNewsletter && <div className="ml-embedded" data-form="TEv6Sb" />} */}
-      <div className="ml-embedded" data-form="TEv6Sb" />
       <Text fontSize="30px" lineHeight="38px" fontWeight="600" mb={4} as="h4">
         Join over 4,000+ customers already growing with Luxim.
       </Text>
