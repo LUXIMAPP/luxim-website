@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import React, { useState, useEffect, useMemo } from 'react';
+import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react';
 import { CiSearch } from "react-icons/ci";
 import useDebounce from '../../hooks/useDebounce';
 import instance from "../../utils/instance";
@@ -14,6 +15,7 @@ import others from "../../public/others/others.png";
 
 const Leaderboard = () => {
   const limit = 15;
+  const router = useRouter();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -170,7 +172,8 @@ const Leaderboard = () => {
                 <Image src={trophy} alt="trophy" width={20} />
               </Box>
               <Box
-                width={{ base: "50%", lg: "30%" }}
+                width={{ base: "100%", lg: "30%" }}
+                mt={{ base: "15px", lg: "0px" }}
                 className='flex items-center border rounded-sm px-3 py-2 input-container'
               >
                 <CiSearch size={15} />
@@ -183,9 +186,8 @@ const Leaderboard = () => {
                 }}>
                   <thead>
                     <tr>
-                      <th width="20%">No</th>
+                      <th width="30%">No</th>
                       <th>Username</th>
-                      <th>Full Name</th>
                       <th>Total Points</th>
                     </tr>
                   </thead>
@@ -209,7 +211,6 @@ const Leaderboard = () => {
                               {d?.username}
                             </span>
                           </td>
-                          <td>{d?.first_name} {d?.last_name}</td>
                           <td>{d?.total_points}</td>
                         </tr>
                       );
@@ -264,7 +265,7 @@ const Leaderboard = () => {
                 color="white"
                 fontSize="14px"
                 padding="8px 16px"
-                onClick={() => window.open('https://download.luximapp.com/thank-you/', '_blank')}
+                onClick={() => router.push("#leaderboard")}
               />
           </Wrapper>
         </Wrapper>
