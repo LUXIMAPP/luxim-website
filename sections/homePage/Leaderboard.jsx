@@ -188,6 +188,7 @@ const Leaderboard = () => {
                     <tr>
                       <th width="30%">No</th>
                       <th>Username</th>
+                      <th>Weekly Points</th>
                       <th>Total Points</th>
                     </tr>
                   </thead>
@@ -211,7 +212,8 @@ const Leaderboard = () => {
                               {d?.username}
                             </span>
                           </td>
-                          <td>{d?.total_points}</td>
+                          <td>{Math.floor(d?.weekly_points)}</td>
+                          <td>{Math.floor(d?.total_points)}</td>
                         </tr>
                       );
                     })}
