@@ -177,7 +177,7 @@ const Leaderboard = () => {
                 className='flex items-center border rounded-sm px-3 py-2 input-container'
               >
                 <CiSearch size={15} />
-                <input type="text" value={searchTerm} placeholder="Search" name="search" onChange={handleChange} className="ml-4" />
+                <input type="text" value={searchTerm} placeholder="@username" name="search" onChange={handleChange} className="ml-4" />
               </Box>
             </Box>
               {!loading ? (
